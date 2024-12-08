@@ -12,17 +12,41 @@ namespace BibliotecaSegundaEdicion
 {
     public partial class Libros : Form
     {
+        private List<GestionLibros> libros;
+        private ConsultaLibros consulta;
+        private GestionLibros gestionLibros;
         public Libros()
         {
             InitializeComponent();
             configurarTabla();
+            libros = new List<GestionLibros>();
+            consulta = new ConsultaLibros();
+            gestionLibros = new GestionLibros();
+            CargarProdutos();
+
             // Deshabilitar la capacidad de mover el formulario
             this.FormBorderStyle = FormBorderStyle.None; // Sin borde
             this.TopLevel = false; // Importante para ser embebido en el Panel
             this.Dock = DockStyle.Fill; // Ajustar al contenedor
             this.AutoScaleMode = AutoScaleMode.None;
         }
+        private void CargarProdutos(string filtro = "")
+        {
+            dgvLibros.Rows.Clear();
+            dgvLibros.Refresh();
+            libros.Clear();
+            libros = consulta.getLibro(filtro);
 
+            for (int i =0; i<libros.Count; i++)
+            {
+                dgvLibros.RowTemplate.Height = 50;
+                dgvLibros.Rows.Add(
+                    libros[i].titulo,
+                    libros[i].autor,
+                    libros[i].ISBN,
+                    libros[i].disponibilidad);
+            }
+        }
         private void configurarTabla()
         {
             dgvLibros.AllowUserToAddRows = false;
@@ -50,6 +74,23 @@ namespace BibliotecaSegundaEdicion
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseColumnTextForButtonValue = true;
             dgvLibros.Columns.Add(btnEliminar);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            cargarDatosLibros();
+            if (consulta.AddLibro(gestionLibros))
+            {
+                CargarProdutos();
+            }
+
+        }
+        private void cargarDatosLibros()
+        {
+            gestionLibros.titulo = txtTitulo.Text.Trim();
+            gestionLibros.autor = txtAutor.Text.Trim();
+            gestionLibros.ISBN = Convert.ToInt32(txtISBN.Text.Trim());
+            gestionLibros.disponibilidad = cmbEstado.SelectedItem.ToString();
         }
     }
 }
