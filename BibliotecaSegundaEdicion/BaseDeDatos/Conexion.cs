@@ -10,7 +10,7 @@ namespace BibliotecaSegundaEdicion
     {
         protected string server = "localhost";
         protected string dataBase = "biblioteca_n4";
-        protected string user = "root";
+        protected string user = "root";//sus
         protected string password = "";
     }
 }
