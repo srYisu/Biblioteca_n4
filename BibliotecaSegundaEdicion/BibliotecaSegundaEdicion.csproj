@@ -191,5 +191,11 @@
   <ItemGroup>
     <None Include="Resources\carpeta-abierta.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

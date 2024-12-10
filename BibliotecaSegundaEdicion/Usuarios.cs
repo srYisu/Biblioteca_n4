@@ -15,15 +15,30 @@ namespace BibliotecaSegundaEdicion
         public Usuarios()
         {
             InitializeComponent();
-            Ajustes();
+            CargarTabla();
         }
-        private void Ajustes()
+
+        private void CargarTabla()
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            dgvUsuarios.AllowUserToAddRows = false;
+
+            dgvUsuarios.Columns.Add("nombre" , "Nombre");
+            dgvUsuarios.Columns.Add("id", "Identificacion");
+            dgvUsuarios.Columns.Add("tipo", "Tipo");
+
+            DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
+            btnEditar.HeaderText = "Editar";
+            btnEditar.Name = "btnEditar";
+            btnEditar.Text = "Editar";
+            btnEditar.UseColumnTextForButtonValue = true;
+            dgvUsuarios.Columns.Add(btnEditar);
+
+            DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+            btnEliminar.HeaderText = "Eliminar";
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseColumnTextForButtonValue = true;
+            dgvUsuarios.Columns.Add(btnEliminar);
         }
     }
 }

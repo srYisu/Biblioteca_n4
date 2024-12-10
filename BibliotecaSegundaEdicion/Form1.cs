@@ -14,10 +14,15 @@ namespace BibliotecaSegundaEdicion
     public partial class Form1 : Form
     {
         AbrirForms open = new AbrirForms();
+
+        string contra = "Contraseña";
+        string us = "Usuario";
         public Form1()
         {
             InitializeComponent();
             pnlBase.Dock = DockStyle.Fill;
+
+            pnlInvisible.Size = new Size(0,0);
 
             picLogoCentrado.Visible= true;
             btnLibro.Visible = false;
@@ -25,6 +30,9 @@ namespace BibliotecaSegundaEdicion
             btnReportes.Visible = false;
             btnUsuarios.Visible = false;
             picLogo.Visible = false;
+
+            txtContrasena.Text = contra;
+            txtUsuario.Text = us;
 
         }
 
@@ -72,6 +80,7 @@ namespace BibliotecaSegundaEdicion
                 btnUsuarios.Visible = true;
                 picLogo.Visible = true;
                 btnIniciarSesion.Visible = false;
+                tgsMostrarContraseña.Visible = false;
 
                 txtContrasena.Visible = false;
                 txtUsuario.Visible = false;
@@ -80,6 +89,61 @@ namespace BibliotecaSegundaEdicion
             else
             {
                 MessageBox.Show("Datos incorrectos");
+            }
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == us)
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                txtUsuario.Text = us;
+                txtUsuario.ForeColor= Color.Gray;
+            }
+        }
+
+        private void txtContrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text == contra)
+            {
+                txtContrasena.Text = "";
+                txtContrasena.ForeColor = Color.Black;
+                txtContrasena.PasswordChar = '•';
+            }
+        }
+
+        private void txtContrasena_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtContrasena.Text))
+            {
+                txtContrasena.Text = contra;
+                txtContrasena.ForeColor = Color.Gray;
+                txtContrasena.PasswordChar = '\0';
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = pnlInvisible;
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tgsMostrarContraseña.Checked)
+            {
+                txtContrasena.PasswordChar = '\0';
+            }
+            else
+            {
+                txtContrasena.PasswordChar= '•';
             }
         }
     }

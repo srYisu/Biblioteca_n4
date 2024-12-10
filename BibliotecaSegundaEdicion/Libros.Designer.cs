@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTitulo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAutor = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,7 +42,10 @@
             this.lblISBN = new System.Windows.Forms.Label();
             this.lblAutor = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.lblNombrePagina = new System.Windows.Forms.Label();
+            this.picLogoPagina = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbEstado
@@ -58,7 +61,7 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Disponible",
             "Disponiblen\'t"});
-            this.cmbEstado.Location = new System.Drawing.Point(284, 130);
+            this.cmbEstado.Location = new System.Drawing.Point(284, 167);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(173, 36);
@@ -75,13 +78,13 @@
             this.txtTitulo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTitulo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitulo.Location = new System.Drawing.Point(37, 56);
+            this.txtTitulo.Location = new System.Drawing.Point(37, 85);
             this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.PasswordChar = '\0';
             this.txtTitulo.PlaceholderText = "";
             this.txtTitulo.SelectedText = "";
-            this.txtTitulo.Size = new System.Drawing.Size(172, 29);
+            this.txtTitulo.Size = new System.Drawing.Size(173, 36);
             this.txtTitulo.TabIndex = 1;
             // 
             // txtAutor
@@ -95,13 +98,13 @@
             this.txtAutor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAutor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAutor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAutor.Location = new System.Drawing.Point(284, 56);
+            this.txtAutor.Location = new System.Drawing.Point(284, 85);
             this.txtAutor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.PasswordChar = '\0';
             this.txtAutor.PlaceholderText = "";
             this.txtAutor.SelectedText = "";
-            this.txtAutor.Size = new System.Drawing.Size(172, 29);
+            this.txtAutor.Size = new System.Drawing.Size(173, 36);
             this.txtAutor.TabIndex = 2;
             // 
             // txtISBN
@@ -115,59 +118,60 @@
             this.txtISBN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtISBN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtISBN.Location = new System.Drawing.Point(37, 130);
+            this.txtISBN.Location = new System.Drawing.Point(37, 167);
             this.txtISBN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.PasswordChar = '\0';
             this.txtISBN.PlaceholderText = "";
             this.txtISBN.SelectedText = "";
-            this.txtISBN.Size = new System.Drawing.Size(172, 29);
+            this.txtISBN.Size = new System.Drawing.Size(173, 36);
             this.txtISBN.TabIndex = 3;
             // 
             // dgvLibros
             // 
             this.dgvLibros.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(204)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvLibros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvLibros.ColumnHeadersHeight = 24;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLibros.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(204)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLibros.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLibros.Location = new System.Drawing.Point(27, 185);
+            this.dgvLibros.Location = new System.Drawing.Point(37, 225);
             this.dgvLibros.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvLibros.RowHeadersVisible = false;
             this.dgvLibros.RowHeadersWidth = 51;
             this.dgvLibros.RowTemplate.Height = 24;
-            this.dgvLibros.Size = new System.Drawing.Size(593, 225);
+            this.dgvLibros.Size = new System.Drawing.Size(723, 279);
             this.dgvLibros.TabIndex = 4;
             this.dgvLibros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLibros.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,12 +201,13 @@
             this.btnGuardar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGuardar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(478, 137);
+            this.btnGuardar.Location = new System.Drawing.Point(587, 167);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(172, 29);
+            this.btnGuardar.Size = new System.Drawing.Size(173, 36);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -210,45 +215,77 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(34, 31);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTitulo.Location = new System.Drawing.Point(34, 60);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(33, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(52, 21);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Titulo";
             // 
             // lblISBN
             // 
             this.lblISBN.AutoSize = true;
-            this.lblISBN.Location = new System.Drawing.Point(34, 102);
+            this.lblISBN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblISBN.Location = new System.Drawing.Point(34, 139);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(32, 13);
+            this.lblISBN.Size = new System.Drawing.Size(46, 21);
             this.lblISBN.TabIndex = 7;
             this.lblISBN.Text = "ISBN";
             // 
             // lblAutor
             // 
             this.lblAutor.AutoSize = true;
-            this.lblAutor.Location = new System.Drawing.Point(281, 31);
+            this.lblAutor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAutor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAutor.Location = new System.Drawing.Point(281, 60);
             this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(32, 13);
+            this.lblAutor.Size = new System.Drawing.Size(52, 21);
             this.lblAutor.TabIndex = 8;
             this.lblAutor.Text = "Autor";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(281, 102);
+            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEstado.Location = new System.Drawing.Point(281, 139);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(40, 13);
+            this.lblEstado.Size = new System.Drawing.Size(59, 21);
             this.lblEstado.TabIndex = 9;
             this.lblEstado.Text = "Estado";
+            // 
+            // lblNombrePagina
+            // 
+            this.lblNombrePagina.AutoSize = true;
+            this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
+            this.lblNombrePagina.Location = new System.Drawing.Point(329, 9);
+            this.lblNombrePagina.Name = "lblNombrePagina";
+            this.lblNombrePagina.Size = new System.Drawing.Size(96, 37);
+            this.lblNombrePagina.TabIndex = 10;
+            this.lblNombrePagina.Text = "Libros";
+            // 
+            // picLogoPagina
+            // 
+            this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.libro_marcador__2_;
+            this.picLogoPagina.ImageRotate = 0F;
+            this.picLogoPagina.Location = new System.Drawing.Point(680, 12);
+            this.picLogoPagina.Name = "picLogoPagina";
+            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
+            this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoPagina.TabIndex = 11;
+            this.picLogoPagina.TabStop = false;
+            this.picLogoPagina.UseTransparentBackground = true;
             // 
             // Libros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(677, 420);
+            this.ClientSize = new System.Drawing.Size(796, 534);
+            this.Controls.Add(this.picLogoPagina);
+            this.Controls.Add(this.lblNombrePagina);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblAutor);
             this.Controls.Add(this.lblISBN);
@@ -264,6 +301,7 @@
             this.Name = "Libros";
             this.Text = "Libros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +318,7 @@
         private System.Windows.Forms.Label lblISBN;
         private System.Windows.Forms.Label lblAutor;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblNombrePagina;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogoPagina;
     }
 }

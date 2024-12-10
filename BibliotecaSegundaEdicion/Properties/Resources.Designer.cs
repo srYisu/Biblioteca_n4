@@ -73,6 +73,16 @@ namespace BibliotecaSegundaEdicion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image__3_ {
+            get {
+                object obj = ResourceManager.GetObject("image (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image__6_ {
             get {
                 object obj = ResourceManager.GetObject("image (6)", resourceCulture);
@@ -96,6 +106,16 @@ namespace BibliotecaSegundaEdicion.Properties {
         internal static System.Drawing.Bitmap libro_marcador__2_ {
             get {
                 object obj = ResourceManager.GetObject("libro-marcador (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario_robot {
+            get {
+                object obj = ResourceManager.GetObject("usuario-robot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

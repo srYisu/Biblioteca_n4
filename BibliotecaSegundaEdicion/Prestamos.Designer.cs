@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbmUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbmLibro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvPrestamos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnGuardarPrestamo = new Guna.UI2.WinForms.Guna2Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblLibro = new System.Windows.Forms.Label();
+            this.lblNombrePagina = new System.Windows.Forms.Label();
+            this.picLogoPagina = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).BeginInit();
             this.SuspendLayout();
             // 
             // cbmUsuario
@@ -54,7 +57,7 @@
             this.cbmUsuario.Items.AddRange(new object[] {
             "Disponible",
             "Disponiblen\'t"});
-            this.cbmUsuario.Location = new System.Drawing.Point(286, 52);
+            this.cbmUsuario.Location = new System.Drawing.Point(331, 121);
             this.cbmUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbmUsuario.Name = "cbmUsuario";
             this.cbmUsuario.Size = new System.Drawing.Size(173, 36);
@@ -73,7 +76,7 @@
             this.cbmLibro.Items.AddRange(new object[] {
             "Disponible",
             "Disponiblen\'t"});
-            this.cbmLibro.Location = new System.Drawing.Point(50, 52);
+            this.cbmLibro.Location = new System.Drawing.Point(42, 121);
             this.cbmLibro.Margin = new System.Windows.Forms.Padding(2);
             this.cbmLibro.Name = "cbmLibro";
             this.cbmLibro.Size = new System.Drawing.Size(173, 36);
@@ -82,47 +85,48 @@
             // dgvPrestamos
             // 
             this.dgvPrestamos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(204)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            this.dgvPrestamos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dgvPrestamos.ColumnHeadersHeight = 24;
             this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(204)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle43;
             this.dgvPrestamos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPrestamos.Location = new System.Drawing.Point(11, 159);
+            this.dgvPrestamos.Location = new System.Drawing.Point(28, 218);
             this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrestamos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrestamos.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.dgvPrestamos.RowHeadersVisible = false;
             this.dgvPrestamos.RowHeadersWidth = 51;
             this.dgvPrestamos.RowTemplate.Height = 24;
-            this.dgvPrestamos.Size = new System.Drawing.Size(690, 225);
+            this.dgvPrestamos.Size = new System.Drawing.Size(737, 287);
             this.dgvPrestamos.TabIndex = 5;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -152,9 +156,10 @@
             this.btnGuardarPrestamo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardarPrestamo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGuardarPrestamo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGuardarPrestamo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGuardarPrestamo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
+            this.btnGuardarPrestamo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPrestamo.Location = new System.Drawing.Point(498, 118);
+            this.btnGuardarPrestamo.Location = new System.Drawing.Point(592, 163);
             this.btnGuardarPrestamo.Name = "btnGuardarPrestamo";
             this.btnGuardarPrestamo.Size = new System.Drawing.Size(173, 36);
             this.btnGuardarPrestamo.TabIndex = 6;
@@ -163,27 +168,55 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(283, 18);
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.Location = new System.Drawing.Point(328, 87);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(65, 21);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblLibro
             // 
             this.lblLibro.AutoSize = true;
-            this.lblLibro.Location = new System.Drawing.Point(47, 18);
+            this.lblLibro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLibro.Location = new System.Drawing.Point(38, 87);
             this.lblLibro.Name = "lblLibro";
-            this.lblLibro.Size = new System.Drawing.Size(30, 13);
+            this.lblLibro.Size = new System.Drawing.Size(48, 21);
             this.lblLibro.TabIndex = 8;
             this.lblLibro.Text = "Libro";
+            // 
+            // lblNombrePagina
+            // 
+            this.lblNombrePagina.AutoSize = true;
+            this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
+            this.lblNombrePagina.Location = new System.Drawing.Point(324, 9);
+            this.lblNombrePagina.Name = "lblNombrePagina";
+            this.lblNombrePagina.Size = new System.Drawing.Size(152, 37);
+            this.lblNombrePagina.TabIndex = 11;
+            this.lblNombrePagina.Text = "Prestamos";
+            // 
+            // picLogoPagina
+            // 
+            this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.image__6_;
+            this.picLogoPagina.ImageRotate = 0F;
+            this.picLogoPagina.Location = new System.Drawing.Point(680, 12);
+            this.picLogoPagina.Name = "picLogoPagina";
+            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
+            this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoPagina.TabIndex = 13;
+            this.picLogoPagina.TabStop = false;
+            this.picLogoPagina.UseTransparentBackground = true;
             // 
             // Prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(712, 395);
+            this.ClientSize = new System.Drawing.Size(796, 534);
+            this.Controls.Add(this.picLogoPagina);
+            this.Controls.Add(this.lblNombrePagina);
             this.Controls.Add(this.lblLibro);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnGuardarPrestamo);
@@ -196,6 +229,7 @@
             this.Text = "++";
             this.Load += new System.EventHandler(this.Prestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +242,7 @@
         private Guna.UI2.WinForms.Guna2Button btnGuardarPrestamo;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblLibro;
+        private System.Windows.Forms.Label lblNombrePagina;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogoPagina;
     }
 }
