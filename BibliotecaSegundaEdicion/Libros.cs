@@ -22,7 +22,7 @@ namespace BibliotecaSegundaEdicion
             libros = new List<GestionLibros>();
             consulta = new ConsultaLibros();
             gestionLibros = new GestionLibros();
-            //CargarProdutos();
+            CargarProductos();
 
             // Deshabilitar la capacidad de mover el formulario
             this.FormBorderStyle = FormBorderStyle.None; // Sin borde
@@ -105,6 +105,25 @@ namespace BibliotecaSegundaEdicion
                 return false;
             }
             return true;
+        }
+
+        private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvLibros.Columns["btnEditar"].Index && e.RowIndex >= 0)
+            {
+
+            }
+            if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index && e.RowIndex >= 0) 
+            {
+                consulta.eliminarLibro(gestionLibros.ISBN);
+                CargarProductos();
+            }
+
         }
     }
 }

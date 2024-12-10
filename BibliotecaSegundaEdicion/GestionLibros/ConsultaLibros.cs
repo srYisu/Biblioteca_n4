@@ -20,7 +20,7 @@ namespace BibliotecaSegundaEdicion
 
         public List<GestionLibros> getLibro(string filtro)
         {
-            string QUERY = "SELECT * From libro";
+            string QUERY = "SELECT * From libros";
             MySqlDataReader mReader = null;
             try
             {
@@ -69,7 +69,7 @@ namespace BibliotecaSegundaEdicion
             return mCommand.ExecuteNonQuery() > 0;
         }
 
-        public bool EditLibro(GestionLibros gLibro)
+        public bool EditLibro(GestionLibros libros)
         {
             string UPDATE = "UPDATE libro SET"+
                 "titulo = @titulo" +
@@ -80,16 +80,16 @@ namespace BibliotecaSegundaEdicion
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
 
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", gLibro.titulo));
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", gLibro.autor));
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", gLibro.ISBN));
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", gLibro.disponibilidad));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", libros.titulo));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", libros.autor));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", libros.disponibilidad));
             return mCommand.ExecuteNonQuery() > 0;
         }
 
-        public bool eliminarProducto(int ISbn)
+        public bool eliminarLibro(int ISbn)
         {
-            string DELETE = "DELETE FROM products WHERE ISBN = @ISBN;";
+            string DELETE = "DELETE FROM libros WHERE ISBN = @ISBN;";
 
             using (MySqlCommand mCommand = new MySqlCommand(DELETE, conexionMySQL.GetConnection()))
             {
