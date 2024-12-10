@@ -76,6 +76,9 @@ namespace BibliotecaSegundaEdicion
         {
             MostrarPanelSeleccionado();
         }
+        private void ReporteLibrosDisponibles()
+        {
 
+        }
     }
 }

@@ -130,5 +130,15 @@ namespace BibliotecaSegundaEdicion
             }
 
         }
+
+        private void Libros_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblISBN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
