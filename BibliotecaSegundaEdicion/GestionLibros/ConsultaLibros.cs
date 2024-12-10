@@ -71,7 +71,7 @@ namespace BibliotecaSegundaEdicion
 
         public bool EditLibro(GestionLibros libros)
         {
-            string UPDATE = "UPDATE libros SET titulo = @titulo, autor = @autor, disponibilidad = @disponibilidad, WHERE ISBN = @ISBN;";
+            string UPDATE = "UPDATE libros SET titulo = @titulo, autor = @autor, disponibilidad = @disponibilidad WHERE ISBN = @ISBN;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
 

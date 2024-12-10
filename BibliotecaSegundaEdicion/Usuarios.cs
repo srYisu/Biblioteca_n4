@@ -32,7 +32,7 @@ namespace BibliotecaSegundaEdicion
             dgvUsuarios.Columns.Add("nombre" , "Nombre");
             dgvUsuarios.Columns.Add("id", "Identificacion");
             dgvUsuarios.Columns.Add("tipo", "Tipo");
-
+            
             DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
             btnEditar.HeaderText = "Editar";
             btnEditar.Name = "btnEditar";

@@ -59,6 +59,7 @@ namespace BibliotecaSegundaEdicion
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@id", usuarios.id));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@nombre", usuarios.nombre));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@tipo", usuarios.tipoUsuario));
+            
             return mCommand.ExecuteNonQuery() > 0;
 
         }
