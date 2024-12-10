@@ -28,9 +28,9 @@ namespace BibliotecaSegundaEdicion
         private void CargarTabla()
         {
             dgvUsuarios.AllowUserToAddRows = false;
-
-            dgvUsuarios.Columns.Add("nombre" , "Nombre");
+            
             dgvUsuarios.Columns.Add("id", "Identificacion");
+            dgvUsuarios.Columns.Add("nombre" , "Nombre");            
             dgvUsuarios.Columns.Add("tipo", "Tipo");
 
             DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
@@ -58,8 +58,8 @@ namespace BibliotecaSegundaEdicion
             {
                 dgvUsuarios.RowTemplate.Height = 50;
                 dgvUsuarios.Rows.Add(
-                    usuarios[i].nombre,
                     usuarios[i].id,
+                    usuarios[i].nombre,
                     usuarios[i].tipoUsuario);
                 Console.WriteLine("Esta fucnionanado el for");
             }
@@ -68,15 +68,27 @@ namespace BibliotecaSegundaEdicion
         private void CargarDatosUsuarios()
         {
             gestionUsuarios.nombre = txtNombre.Text;
-            gestionUsuarios.id = int.Parse(txtIdentificación.Text);
+            gestionUsuarios.id = getidExist();
             gestionUsuarios.tipoUsuario = cmbTipoUsuario.SelectedItem.ToString();
+        }
+        private int getidExist()
+        {
+            if (!txtIdentificación.Text.Trim().Equals(""))
+            {
+                if (int.TryParse(txtIdentificación.Text, out int id))
+                {
+                    return id;
+                }
+                else return -1;
+            }
+            return -1;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             CargarDatosUsuarios();
             if (consulta.AddUsuario(gestionUsuarios))
             {
-                MessageBox.Show("Ecsito");
+                MessageBox.Show("Datos guardados");
                 CargarUsuarios();
             }
         }
