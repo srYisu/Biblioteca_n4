@@ -20,7 +20,7 @@ namespace BibliotecaSegundaEdicion
 
         public List<GestionLibros> getLibro(string filtro)
         {
-            string QUERY = "SELECT * From libors";
+            string QUERY = "SELECT * From libro";
             MySqlDataReader mReader = null;
             try
             {

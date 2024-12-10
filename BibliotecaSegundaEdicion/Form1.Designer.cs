@@ -200,7 +200,7 @@
             this.pnlBase.Location = new System.Drawing.Point(181, 2);
             this.pnlBase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlBase.Name = "pnlBase";
-            this.pnlBase.Size = new System.Drawing.Size(670, 534);
+            this.pnlBase.Size = new System.Drawing.Size(796, 534);
             this.pnlBase.TabIndex = 1;
             // 
             // picLogoCentrado
@@ -234,7 +234,7 @@
             this.btnIniciarSesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(219, 379);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(322, 379);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(201, 45);
             this.btnIniciarSesion.TabIndex = 7;
@@ -252,7 +252,7 @@
             this.txtContrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(219, 305);
+            this.txtContrasena.Location = new System.Drawing.Point(322, 305);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '\0';
@@ -272,7 +272,7 @@
             this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(219, 231);
+            this.txtUsuario.Location = new System.Drawing.Point(322, 231);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
@@ -285,7 +285,7 @@
             // 
             this.picInicioSesionFoto.Image = ((System.Drawing.Image)(resources.GetObject("picInicioSesionFoto.Image")));
             this.picInicioSesionFoto.ImageRotate = 0F;
-            this.picInicioSesionFoto.Location = new System.Drawing.Point(219, 54);
+            this.picInicioSesionFoto.Location = new System.Drawing.Point(322, 54);
             this.picInicioSesionFoto.Name = "picInicioSesionFoto";
             this.picInicioSesionFoto.Size = new System.Drawing.Size(201, 153);
             this.picInicioSesionFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -295,7 +295,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 231);
+            this.label1.Location = new System.Drawing.Point(219, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 8;
@@ -304,7 +304,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 317);
+            this.label2.Location = new System.Drawing.Point(219, 317);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 9;
@@ -315,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(850, 535);
+            this.ClientSize = new System.Drawing.Size(979, 535);
             this.Controls.Add(this.pnlBase);
             this.Controls.Add(this.pnlLateral);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
