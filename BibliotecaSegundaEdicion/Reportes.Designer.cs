@@ -31,17 +31,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dtgvLibros = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvPrestamos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.rbtnPrestamosActivos = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnLibrosDispoibles = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnUsuariosPrestamo = new Guna.UI2.WinForms.Guna2RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtgvLibros
+            // dgvPrestamos
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -49,9 +49,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvLibros.ColumnHeadersHeight = 4;
-            this.dtgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPrestamos.ColumnHeadersHeight = 4;
+            this.dgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,37 +59,37 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvLibros.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvLibros.Location = new System.Drawing.Point(34, 137);
-            this.dtgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtgvLibros.Name = "dtgvLibros";
-            this.dtgvLibros.RowHeadersVisible = false;
-            this.dtgvLibros.RowHeadersWidth = 51;
-            this.dtgvLibros.RowTemplate.Height = 24;
-            this.dtgvLibros.Size = new System.Drawing.Size(593, 225);
-            this.dtgvLibros.TabIndex = 5;
-            this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgvLibros.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvLibros.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvLibros.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgvLibros.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvLibros.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgvLibros.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgvLibros.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgvLibros.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgvLibros.ThemeStyle.ReadOnly = false;
-            this.dtgvLibros.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgvLibros.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvLibros.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgvLibros.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgvLibros.ThemeStyle.RowsStyle.Height = 24;
-            this.dtgvLibros.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvLibros.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPrestamos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPrestamos.Location = new System.Drawing.Point(34, 137);
+            this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPrestamos.Name = "dgvPrestamos";
+            this.dgvPrestamos.RowHeadersVisible = false;
+            this.dgvPrestamos.RowHeadersWidth = 51;
+            this.dgvPrestamos.RowTemplate.Height = 24;
+            this.dgvPrestamos.Size = new System.Drawing.Size(593, 225);
+            this.dgvPrestamos.TabIndex = 5;
+            this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvPrestamos.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPrestamos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPrestamos.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvPrestamos.ThemeStyle.ReadOnly = false;
+            this.dgvPrestamos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPrestamos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPrestamos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPrestamos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPrestamos.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvPrestamos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPrestamos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // rbtnPrestamosActivos
             // 
@@ -100,7 +100,7 @@
             this.rbtnPrestamosActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnPrestamosActivos.CheckedState.InnerOffset = -4;
             this.rbtnPrestamosActivos.Location = new System.Drawing.Point(86, 60);
-            this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnPrestamosActivos.Name = "rbtnPrestamosActivos";
             this.rbtnPrestamosActivos.Size = new System.Drawing.Size(111, 17);
             this.rbtnPrestamosActivos.TabIndex = 6;
@@ -119,7 +119,7 @@
             this.rbtnLibrosDispoibles.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnLibrosDispoibles.CheckedState.InnerOffset = -4;
             this.rbtnLibrosDispoibles.Location = new System.Drawing.Point(253, 60);
-            this.rbtnLibrosDispoibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnLibrosDispoibles.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnLibrosDispoibles.Name = "rbtnLibrosDispoibles";
             this.rbtnLibrosDispoibles.Size = new System.Drawing.Size(110, 17);
             this.rbtnLibrosDispoibles.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.rbtnUsuariosPrestamo.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnUsuariosPrestamo.CheckedState.InnerOffset = -4;
             this.rbtnUsuariosPrestamo.Location = new System.Drawing.Point(404, 60);
-            this.rbtnUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtnUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(2);
             this.rbtnUsuariosPrestamo.Name = "rbtnUsuariosPrestamo";
             this.rbtnUsuariosPrestamo.Size = new System.Drawing.Size(133, 30);
             this.rbtnUsuariosPrestamo.TabIndex = 8;
@@ -157,12 +157,12 @@
             this.Controls.Add(this.rbtnUsuariosPrestamo);
             this.Controls.Add(this.rbtnLibrosDispoibles);
             this.Controls.Add(this.rbtnPrestamosActivos);
-            this.Controls.Add(this.dtgvLibros);
+            this.Controls.Add(this.dgvPrestamos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reportes";
             this.Text = "Reportes";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +170,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2RadioButton rbtnPrestamosActivos;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgvLibros;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvPrestamos;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnUsuariosPrestamo;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnLibrosDispoibles;
     }

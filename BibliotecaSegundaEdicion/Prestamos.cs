@@ -16,5 +16,15 @@ namespace BibliotecaSegundaEdicion
         {
             InitializeComponent();
         }
+
+        private void Prestamos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfigurarTabla()
+        {
+            dgvPrestamos
+        }
     }
 }
