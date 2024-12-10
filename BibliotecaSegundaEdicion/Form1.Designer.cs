@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlLateral = new Guna.UI2.WinForms.Guna2Panel();
-            this.separatorBajo = new Guna.UI2.WinForms.Guna2Separator();
-            this.pnlBase = new Guna.UI2.WinForms.Guna2Panel();
-            this.separatorUp = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnIniciarSesion = new Guna.UI2.WinForms.Guna2Button();
-            this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlInvisible = new System.Windows.Forms.Panel();
-            this.tgsMostrarContraseña = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.picInicioSesionFoto = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.separatorUp = new Guna.UI2.WinForms.Guna2Separator();
             this.picLogoCentrado = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.separatorBajo = new Guna.UI2.WinForms.Guna2Separator();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnReportes = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnPrestamo = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnLibro = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnlBase = new Guna.UI2.WinForms.Guna2Panel();
+            this.tgsMostrarContraseña = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.btnIniciarSesion = new Guna.UI2.WinForms.Guna2Button();
+            this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picInicioSesionFoto = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlLateral.SuspendLayout();
-            this.pnlBase.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picInicioSesionFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoCentrado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnlBase.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInicioSesionFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLateral
@@ -66,100 +66,10 @@
             this.pnlLateral.Controls.Add(this.btnLibro);
             this.pnlLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLateral.Location = new System.Drawing.Point(0, 0);
-            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLateral.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLateral.Name = "pnlLateral";
             this.pnlLateral.Size = new System.Drawing.Size(180, 535);
             this.pnlLateral.TabIndex = 0;
-            // 
-            // separatorBajo
-            // 
-            this.separatorBajo.Location = new System.Drawing.Point(9, 391);
-            this.separatorBajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.separatorBajo.Name = "separatorBajo";
-            this.separatorBajo.Size = new System.Drawing.Size(162, 8);
-            this.separatorBajo.TabIndex = 5;
-            // 
-            // pnlBase
-            // 
-            this.pnlBase.Controls.Add(this.tgsMostrarContraseña);
-            this.pnlBase.Controls.Add(this.btnIniciarSesion);
-            this.pnlBase.Controls.Add(this.txtContrasena);
-            this.pnlBase.Controls.Add(this.txtUsuario);
-            this.pnlBase.Controls.Add(this.picInicioSesionFoto);
-            this.pnlBase.Location = new System.Drawing.Point(183, 2);
-            this.pnlBase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlBase.Name = "pnlBase";
-            this.pnlBase.Size = new System.Drawing.Size(796, 534);
-            this.pnlBase.TabIndex = 1;
-            // 
-            // separatorUp
-            // 
-            this.separatorUp.Location = new System.Drawing.Point(9, 135);
-            this.separatorUp.Margin = new System.Windows.Forms.Padding(2);
-            this.separatorUp.Name = "separatorUp";
-            this.separatorUp.Size = new System.Drawing.Size(162, 8);
-            this.separatorUp.TabIndex = 7;
-            // 
-            // btnIniciarSesion
-            // 
-            this.btnIniciarSesion.Animated = true;
-            this.btnIniciarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIniciarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnIniciarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnIniciarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnIniciarSesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(322, 389);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(201, 45);
-            this.btnIniciarSesion.TabIndex = 7;
-            this.btnIniciarSesion.Text = "Iniciar sesión";
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContrasena.DefaultText = "";
-            this.txtContrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtContrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtContrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(322, 287);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '\0';
-            this.txtContrasena.PlaceholderText = "";
-            this.txtContrasena.SelectedText = "";
-            this.txtContrasena.Size = new System.Drawing.Size(201, 43);
-            this.txtContrasena.TabIndex = 6;
-            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
-            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.DefaultText = "";
-            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(322, 232);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.PlaceholderText = "";
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(201, 43);
-            this.txtUsuario.TabIndex = 5;
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // pnlInvisible
             // 
@@ -168,39 +78,13 @@
             this.pnlInvisible.Size = new System.Drawing.Size(29, 40);
             this.pnlInvisible.TabIndex = 8;
             // 
-            // tgsMostrarContraseña
+            // separatorUp
             // 
-            this.tgsMostrarContraseña.Animated = true;
-            this.tgsMostrarContraseña.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.tgsMostrarContraseña.CheckedState.BorderRadius = 11;
-            this.tgsMostrarContraseña.CheckedState.BorderThickness = 2;
-            this.tgsMostrarContraseña.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
-            this.tgsMostrarContraseña.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.tgsMostrarContraseña.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.tgsMostrarContraseña.Location = new System.Drawing.Point(470, 340);
-            this.tgsMostrarContraseña.Name = "tgsMostrarContraseña";
-            this.tgsMostrarContraseña.Size = new System.Drawing.Size(53, 24);
-            this.tgsMostrarContraseña.TabIndex = 8;
-            this.tgsMostrarContraseña.UncheckedState.BorderColor = System.Drawing.Color.Black;
-            this.tgsMostrarContraseña.UncheckedState.BorderRadius = 11;
-            this.tgsMostrarContraseña.UncheckedState.BorderThickness = 2;
-            this.tgsMostrarContraseña.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.tgsMostrarContraseña.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.tgsMostrarContraseña.UncheckedState.InnerBorderRadius = 7;
-            this.tgsMostrarContraseña.UncheckedState.InnerBorderThickness = 2;
-            this.tgsMostrarContraseña.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.tgsMostrarContraseña.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
-            // 
-            // picInicioSesionFoto
-            // 
-            this.picInicioSesionFoto.Image = ((System.Drawing.Image)(resources.GetObject("picInicioSesionFoto.Image")));
-            this.picInicioSesionFoto.ImageRotate = 0F;
-            this.picInicioSesionFoto.Location = new System.Drawing.Point(271, 29);
-            this.picInicioSesionFoto.Name = "picInicioSesionFoto";
-            this.picInicioSesionFoto.Size = new System.Drawing.Size(313, 195);
-            this.picInicioSesionFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInicioSesionFoto.TabIndex = 4;
-            this.picInicioSesionFoto.TabStop = false;
+            this.separatorUp.Location = new System.Drawing.Point(9, 135);
+            this.separatorUp.Margin = new System.Windows.Forms.Padding(2);
+            this.separatorUp.Name = "separatorUp";
+            this.separatorUp.Size = new System.Drawing.Size(162, 8);
+            this.separatorUp.TabIndex = 7;
             // 
             // picLogoCentrado
             // 
@@ -215,6 +99,14 @@
             this.picLogoCentrado.TabIndex = 6;
             this.picLogoCentrado.TabStop = false;
             this.picLogoCentrado.UseTransparentBackground = true;
+            // 
+            // separatorBajo
+            // 
+            this.separatorBajo.Location = new System.Drawing.Point(9, 391);
+            this.separatorBajo.Margin = new System.Windows.Forms.Padding(2);
+            this.separatorBajo.Name = "separatorBajo";
+            this.separatorBajo.Size = new System.Drawing.Size(162, 8);
+            this.separatorBajo.TabIndex = 5;
             // 
             // picLogo
             // 
@@ -331,6 +223,114 @@
             this.btnLibro.Text = "Libros";
             this.btnLibro.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
+            // pnlBase
+            // 
+            this.pnlBase.Controls.Add(this.tgsMostrarContraseña);
+            this.pnlBase.Controls.Add(this.btnIniciarSesion);
+            this.pnlBase.Controls.Add(this.txtContrasena);
+            this.pnlBase.Controls.Add(this.txtUsuario);
+            this.pnlBase.Controls.Add(this.picInicioSesionFoto);
+            this.pnlBase.Location = new System.Drawing.Point(183, 2);
+            this.pnlBase.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlBase.Name = "pnlBase";
+            this.pnlBase.Size = new System.Drawing.Size(796, 534);
+            this.pnlBase.TabIndex = 1;
+            // 
+            // tgsMostrarContraseña
+            // 
+            this.tgsMostrarContraseña.Animated = true;
+            this.tgsMostrarContraseña.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.tgsMostrarContraseña.CheckedState.BorderRadius = 11;
+            this.tgsMostrarContraseña.CheckedState.BorderThickness = 2;
+            this.tgsMostrarContraseña.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
+            this.tgsMostrarContraseña.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.tgsMostrarContraseña.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.tgsMostrarContraseña.Location = new System.Drawing.Point(470, 340);
+            this.tgsMostrarContraseña.Name = "tgsMostrarContraseña";
+            this.tgsMostrarContraseña.Size = new System.Drawing.Size(53, 24);
+            this.tgsMostrarContraseña.TabIndex = 8;
+            this.tgsMostrarContraseña.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.tgsMostrarContraseña.UncheckedState.BorderRadius = 11;
+            this.tgsMostrarContraseña.UncheckedState.BorderThickness = 2;
+            this.tgsMostrarContraseña.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.tgsMostrarContraseña.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.tgsMostrarContraseña.UncheckedState.InnerBorderRadius = 7;
+            this.tgsMostrarContraseña.UncheckedState.InnerBorderThickness = 2;
+            this.tgsMostrarContraseña.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.tgsMostrarContraseña.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.Animated = true;
+            this.btnIniciarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnIniciarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnIniciarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnIniciarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnIniciarSesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(322, 389);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(201, 45);
+            this.btnIniciarSesion.TabIndex = 7;
+            this.btnIniciarSesion.Text = "Iniciar sesión";
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContrasena.DefaultText = "";
+            this.txtContrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasena.Location = new System.Drawing.Point(322, 287);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(7);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '\0';
+            this.txtContrasena.PlaceholderText = "";
+            this.txtContrasena.SelectedText = "";
+            this.txtContrasena.Size = new System.Drawing.Size(201, 43);
+            this.txtContrasena.TabIndex = 6;
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.DefaultText = "";
+            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Location = new System.Drawing.Point(322, 232);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.PlaceholderText = "";
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(201, 43);
+            this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            // 
+            // picInicioSesionFoto
+            // 
+            this.picInicioSesionFoto.Image = ((System.Drawing.Image)(resources.GetObject("picInicioSesionFoto.Image")));
+            this.picInicioSesionFoto.ImageRotate = 0F;
+            this.picInicioSesionFoto.Location = new System.Drawing.Point(271, 29);
+            this.picInicioSesionFoto.Name = "picInicioSesionFoto";
+            this.picInicioSesionFoto.Size = new System.Drawing.Size(313, 195);
+            this.picInicioSesionFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInicioSesionFoto.TabIndex = 4;
+            this.picInicioSesionFoto.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,15 +340,15 @@
             this.Controls.Add(this.pnlBase);
             this.Controls.Add(this.pnlLateral);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Biblioteca n4";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlLateral.ResumeLayout(false);
-            this.pnlBase.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picInicioSesionFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoCentrado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnlBase.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picInicioSesionFoto)).EndInit();
             this.ResumeLayout(false);
 
         }

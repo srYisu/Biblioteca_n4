@@ -106,6 +106,9 @@
     <Compile Include="AbrirForms.cs" />
     <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="BaseDeDatos\ConexionMySQL.cs" />
+    <Compile Include="Prestamos\ConsultaPrestamos.cs" />
+    <Compile Include="Prestamos\GestionPrestamos.cs" />
+    <Compile Include="GestionUsuarios\ConsultaUsuarios.cs" />
     <Compile Include="GestionLibros\ConsultaLibros.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -114,6 +117,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionLibros\GestionLibros.cs" />
+    <Compile Include="GestionUsuarios\GestionUsuarios.cs" />
     <Compile Include="Libros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,5 +201,6 @@
   <ItemGroup>
     <None Include="Resources\image %283%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

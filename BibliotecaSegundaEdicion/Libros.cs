@@ -114,14 +114,19 @@ namespace BibliotecaSegundaEdicion
 
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dgvLibros.Columns["btnEditar"].Index && e.RowIndex >= 0)
+            if(e.RowIndex >= 0)
             {
+                if (e.ColumnIndex == dgvLibros.Columns["btnEditar"].Index)
+                {
 
-            }
-            if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index && e.RowIndex >= 0) 
-            {
-                consulta.eliminarLibro(gestionLibros.ISBN);
-                CargarProductos();
+                }
+                if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index)
+                {
+                    int isbn = Convert.ToInt32(dgvLibros.Rows[e.RowIndex].Cells["ISBN"].Value.ToString());
+
+                    consulta.eliminarLibro(isbn);
+                    CargarProductos();
+                }
             }
 
         }
