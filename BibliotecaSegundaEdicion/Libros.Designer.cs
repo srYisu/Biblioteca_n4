@@ -60,7 +60,7 @@
             this.cmbEstado.ItemHeight = 30;
             this.cmbEstado.Items.AddRange(new object[] {
             "Disponible",
-            "Disponiblen\'t"});
+            "Prestamo"});
             this.cmbEstado.Location = new System.Drawing.Point(284, 167);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEstado.Name = "cmbEstado";

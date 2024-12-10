@@ -12,15 +12,62 @@ namespace BibliotecaSegundaEdicion
 {
     public partial class Prestamos : Form
     {
+        private List<GestionLibros> libros;
+        private List<GestionUsuarios> usuarios;
+        private ConsultaLibros consulta;
+        private ConsultaUsuarios consultaUsuarios;
+
         public Prestamos()
         {
+            libros = new List<GestionLibros>();
+            consulta = new ConsultaLibros();
+            usuarios = new List<GestionUsuarios>();
+            consultaUsuarios = new ConsultaUsuarios();
             InitializeComponent();
             ConfigurarTabla();
+            
+            ObtenerLibros();
+            ObtenerUsuarios();
+            LLenarComboBoxLibros();
         }
 
         private void Prestamos_Load(object sender, EventArgs e)
         {
 
+        }
+        private void LlenarComboBoxUsuario(string tipoUsuario)
+        {
+            cbmUsuario.Items.Clear();
+
+            foreach (var usuarios in usuarios)
+            {
+                if (usuarios.tipoUsuario.ToString() == tipoUsuario)
+                {
+                    cbmUsuario.Items.Add(usuarios.nombre);
+                }
+            }
+        }
+        private void ObtenerUsuarios(string filtro = "")
+        {
+            usuarios.Clear();
+            usuarios = consultaUsuarios.GetUsuario(filtro);
+        }
+        private void ObtenerLibros(string filtro = "")
+        {
+            libros.Clear();
+            libros = consulta.getLibro(filtro);
+        }
+        private void LLenarComboBoxLibros()
+        {
+            string dis = "Disponible";
+            cbmLibro.Items.Clear();
+            foreach (var libro in libros)
+            {
+                if (libro.disponibilidad.ToString() == dis)
+                {
+                    cbmLibro.Items.Add(libro.titulo);
+                }
+            }
         }
 
         private void ConfigurarTabla()
@@ -28,12 +75,14 @@ namespace BibliotecaSegundaEdicion
             dgvPrestamos.AllowUserToAddRows = false;
 
             dgvPrestamos.Columns.Add("usuario", "Usuario");
+            dgvPrestamos.Columns.Add("ID", "Identificacion");
             dgvPrestamos.Columns.Add("titulo", "Titulo");
             dgvPrestamos.Columns.Add("autor", "Autor");
             dgvPrestamos.Columns.Add("ISBN", "ISBN");
             dgvPrestamos.Columns.Add("estado", "Estado");
-
+            
             dgvPrestamos.Columns["usuario"].ReadOnly = true;
+            dgvPrestamos.Columns["ID"].ReadOnly = true;
             dgvPrestamos.Columns["titulo"].ReadOnly = true;
             dgvPrestamos.Columns["autor"].ReadOnly = true;
             dgvPrestamos.Columns["ISBN"].ReadOnly = true;
@@ -45,6 +94,12 @@ namespace BibliotecaSegundaEdicion
             btnFinalizar.Text = "Finalizar";
             btnFinalizar.UseColumnTextForButtonValue = true;
             dgvPrestamos.Columns.Add(btnFinalizar);
+        }
+
+        private void cmbTipoDeUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipo = cmbTipoDeUsuario.SelectedItem.ToString();
+            LlenarComboBoxUsuario(tipo);
         }
     }
 }

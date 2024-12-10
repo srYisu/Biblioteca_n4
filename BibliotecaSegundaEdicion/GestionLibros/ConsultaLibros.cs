@@ -17,7 +17,7 @@ namespace BibliotecaSegundaEdicion
             conexionMySQL = new ConexionMySQL();
             libros = new List<GestionLibros>();
         }
-
+        
         public List<GestionLibros> getLibro(string filtro)
         {
             string QUERY = "SELECT * From libros";

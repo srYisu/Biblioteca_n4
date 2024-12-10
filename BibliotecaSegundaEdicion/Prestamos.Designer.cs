@@ -235,6 +235,7 @@
             this.cmbTipoDeUsuario.Name = "cmbTipoDeUsuario";
             this.cmbTipoDeUsuario.Size = new System.Drawing.Size(173, 36);
             this.cmbTipoDeUsuario.TabIndex = 14;
+            this.cmbTipoDeUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDeUsuario_SelectedIndexChanged);
             // 
             // Prestamos
             // 
