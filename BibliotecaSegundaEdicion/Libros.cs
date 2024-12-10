@@ -22,7 +22,7 @@ namespace BibliotecaSegundaEdicion
             libros = new List<GestionLibros>();
             consulta = new ConsultaLibros();
             gestionLibros = new GestionLibros();
-            CargarProdutos();
+            //CargarProdutos();
 
             // Deshabilitar la capacidad de mover el formulario
             this.FormBorderStyle = FormBorderStyle.None; // Sin borde
@@ -30,7 +30,7 @@ namespace BibliotecaSegundaEdicion
             this.Dock = DockStyle.Fill; // Ajustar al contenedor
             this.AutoScaleMode = AutoScaleMode.None;
         }
-        private void CargarProdutos(string filtro = "")
+        private void CargarProductos(string filtro = "")
         {
             dgvLibros.Rows.Clear();
             dgvLibros.Refresh();
@@ -78,12 +78,17 @@ namespace BibliotecaSegundaEdicion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!DatosCorrectos())
+            {
+                return;
+            }
+
             cargarDatosLibros();
             if (consulta.AddLibro(gestionLibros))
             {
-                CargarProdutos();
+                MessageBox.Show("Productos agregados correctamente");
+                CargarProductos();
             }
-
         }
         private void cargarDatosLibros()
         {
@@ -91,6 +96,15 @@ namespace BibliotecaSegundaEdicion
             gestionLibros.autor = txtAutor.Text.Trim();
             gestionLibros.ISBN = Convert.ToInt32(txtISBN.Text.Trim());
             gestionLibros.disponibilidad = cmbEstado.SelectedItem.ToString();
+        }
+        private bool DatosCorrectos()
+        {
+            if (txtTitulo.Text.Trim().Equals("") || txtAutor.Text.Trim().Equals("") || txtISBN.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Ingrese Todos los datos");
+                return false;
+            }
+            return true;
         }
     }
 }

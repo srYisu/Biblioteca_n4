@@ -28,23 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.dtgvLibros = new Guna.UI2.WinForms.Guna2DataGridView();
             this.rbtnPrestamosActivos = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnLibrosDispoibles = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnUsuariosPrestamo = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // dtgvLibros
             // 
@@ -69,12 +61,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvLibros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvLibros.Location = new System.Drawing.Point(45, 169);
+            this.dtgvLibros.Location = new System.Drawing.Point(34, 137);
+            this.dtgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgvLibros.Name = "dtgvLibros";
             this.dtgvLibros.RowHeadersVisible = false;
             this.dtgvLibros.RowHeadersWidth = 51;
             this.dtgvLibros.RowTemplate.Height = 24;
-            this.dtgvLibros.Size = new System.Drawing.Size(791, 277);
+            this.dtgvLibros.Size = new System.Drawing.Size(593, 225);
             this.dtgvLibros.TabIndex = 5;
             this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvLibros.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -106,9 +99,10 @@
             this.rbtnPrestamosActivos.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbtnPrestamosActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnPrestamosActivos.CheckedState.InnerOffset = -4;
-            this.rbtnPrestamosActivos.Location = new System.Drawing.Point(114, 74);
+            this.rbtnPrestamosActivos.Location = new System.Drawing.Point(86, 60);
+            this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnPrestamosActivos.Name = "rbtnPrestamosActivos";
-            this.rbtnPrestamosActivos.Size = new System.Drawing.Size(139, 20);
+            this.rbtnPrestamosActivos.Size = new System.Drawing.Size(111, 17);
             this.rbtnPrestamosActivos.TabIndex = 6;
             this.rbtnPrestamosActivos.Text = "Prestamos activos";
             this.rbtnPrestamosActivos.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -124,9 +118,10 @@
             this.rbtnLibrosDispoibles.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbtnLibrosDispoibles.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnLibrosDispoibles.CheckedState.InnerOffset = -4;
-            this.rbtnLibrosDispoibles.Location = new System.Drawing.Point(337, 74);
+            this.rbtnLibrosDispoibles.Location = new System.Drawing.Point(253, 60);
+            this.rbtnLibrosDispoibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnLibrosDispoibles.Name = "rbtnLibrosDispoibles";
-            this.rbtnLibrosDispoibles.Size = new System.Drawing.Size(140, 20);
+            this.rbtnLibrosDispoibles.Size = new System.Drawing.Size(110, 17);
             this.rbtnLibrosDispoibles.TabIndex = 7;
             this.rbtnLibrosDispoibles.Text = "Libros Disponibles";
             this.rbtnLibrosDispoibles.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -142,9 +137,10 @@
             this.rbtnUsuariosPrestamo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbtnUsuariosPrestamo.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnUsuariosPrestamo.CheckedState.InnerOffset = -4;
-            this.rbtnUsuariosPrestamo.Location = new System.Drawing.Point(539, 74);
+            this.rbtnUsuariosPrestamo.Location = new System.Drawing.Point(404, 60);
+            this.rbtnUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnUsuariosPrestamo.Name = "rbtnUsuariosPrestamo";
-            this.rbtnUsuariosPrestamo.Size = new System.Drawing.Size(167, 36);
+            this.rbtnUsuariosPrestamo.Size = new System.Drawing.Size(133, 30);
             this.rbtnUsuariosPrestamo.TabIndex = 8;
             this.rbtnUsuariosPrestamo.Text = "Usuarios con prestamo\r\npendiente\r\n";
             this.rbtnUsuariosPrestamo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -154,15 +150,16 @@
             // 
             // Reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(867, 475);
+            this.ClientSize = new System.Drawing.Size(650, 386);
             this.Controls.Add(this.rbtnUsuariosPrestamo);
             this.Controls.Add(this.rbtnLibrosDispoibles);
             this.Controls.Add(this.rbtnPrestamosActivos);
             this.Controls.Add(this.dtgvLibros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reportes";
             this.Text = "Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLibros)).EndInit();
@@ -172,8 +169,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnPrestamosActivos;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvLibros;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnUsuariosPrestamo;

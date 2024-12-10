@@ -106,7 +106,7 @@
     <Compile Include="AbrirForms.cs" />
     <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="BaseDeDatos\ConexionMySQL.cs" />
-    <Compile Include="ConsultaLibros.cs" />
+    <Compile Include="GestionLibros\ConsultaLibros.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

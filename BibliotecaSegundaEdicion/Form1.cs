@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZstdSharp.Unsafe;
 
 namespace BibliotecaSegundaEdicion
 {
@@ -17,6 +18,14 @@ namespace BibliotecaSegundaEdicion
         {
             InitializeComponent();
             pnlBase.Dock = DockStyle.Fill;
+
+            picLogoCentrado.Visible= true;
+            btnLibro.Visible = false;
+            btnPrestamo.Visible = false;
+            btnReportes.Visible = false;
+            btnUsuarios.Visible = false;
+            picLogo.Visible = false;
+
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -46,6 +55,32 @@ namespace BibliotecaSegundaEdicion
         {
             Reportes rep = new Reportes();
             open.AbrirFormPanel (this.pnlBase, rep);
+        }
+        string usuario = "123";
+        string contrasena = "111";
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            string usuarioIngresado = txtUsuario.Text;
+            string contrasenaIngresada = txtContrasena.Text;
+
+            if (contrasena == contrasenaIngresada && usuario == usuarioIngresado)
+            {
+                picLogoCentrado.Visible = false;
+                btnLibro.Visible = true;
+                btnPrestamo.Visible = true;
+                btnReportes.Visible = true;
+                btnUsuarios.Visible = true;
+                picLogo.Visible = true;
+                btnIniciarSesion.Visible = false;
+
+                txtContrasena.Visible = false;
+                txtUsuario.Visible = false;
+                picInicioSesionFoto.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos");
+            }
         }
     }
 }
