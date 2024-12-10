@@ -27,9 +27,9 @@ namespace BibliotecaSegundaEdicion
                 if (filtro != null)
                 {
                     QUERY += " WHERE " +
+                    "ISBN LIKE '%" + filtro + "%' OR " +
                     "titulo LIKE '%" + filtro + "%' OR " +
                     "autor LIKE '%" + filtro + "%' OR " +
-                    "ISBN LIKE '%" + filtro + "%' OR " +
                     "disponibilidad LIKE '%" + filtro + "%';";
                 }
 
@@ -41,9 +41,9 @@ namespace BibliotecaSegundaEdicion
                 while (mReader.Read())
                 {
                     libro = new GestionLibros();
+                    libro.ISBN = mReader.GetInt32("ISBN");
                     libro.titulo = mReader.GetString("titulo");
                     libro.autor = mReader.GetString("autor");
-                    libro.ISBN = mReader.GetInt32("ISBN");
                     libro.disponibilidad = mReader.GetString("disponibilidad");
                     libros.Add(libro);
                 }
@@ -57,33 +57,28 @@ namespace BibliotecaSegundaEdicion
         }
         internal bool AddLibro(GestionLibros libros)
         {
-            string INSERT = "INSERT INTO libros (titulo, autor, ISBN, disponibilidad) values (@titulo, @autor, @ISBN, @disponibilidad);";
+            string INSERT = "INSERT INTO libros (titulo, autor, disponibilidad) values (@titulo, @autor,  @disponibilidad);";
 
             MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMySQL.GetConnection());
 
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", libros.titulo));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", libros.autor));
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", libros.disponibilidad));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
 
             return mCommand.ExecuteNonQuery() > 0;
         }
 
         public bool EditLibro(GestionLibros libros)
         {
-            string UPDATE = "UPDATE libro SET"+
-                "titulo = @titulo" +
-                "autor = @autor" +
-                "ISBN = @ISBN" +
-                "disponibilidad = @disponibilidad" +
-                "WHERE ISBN = @ISBN";
+            string UPDATE = "UPDATE libros SET titulo = @titulo, autor = @autor, disponibilidad = @disponibilidad, WHERE ISBN = @ISBN;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
 
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", libros.titulo));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", libros.autor));
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", libros.disponibilidad));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
             return mCommand.ExecuteNonQuery() > 0;
         }
 

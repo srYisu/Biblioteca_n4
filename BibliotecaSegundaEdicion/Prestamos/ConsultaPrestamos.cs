@@ -9,7 +9,7 @@ namespace BibliotecaSegundaEdicion
     internal class ConsultaPrestamos
     {
         private ConexionMySQL conexionMySQL;
-        public List<>
+        
 
     }
 }

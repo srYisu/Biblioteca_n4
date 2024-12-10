@@ -41,9 +41,9 @@ namespace BibliotecaSegundaEdicion
             {
                 dgvLibros.RowTemplate.Height = 50;
                 dgvLibros.Rows.Add(
+                    libros[i].ISBN,
                     libros[i].titulo,
                     libros[i].autor,
-                    libros[i].ISBN,
                     libros[i].disponibilidad);
             }
         }
@@ -51,14 +51,14 @@ namespace BibliotecaSegundaEdicion
         {
             dgvLibros.AllowUserToAddRows = false;
 
-            dgvLibros.Columns.Add("titulo" ,"Titulo");
-            dgvLibros.Columns.Add("autor", "Autor");
             dgvLibros.Columns.Add("ISBN", "ISBN");
+            dgvLibros.Columns.Add("titulo", "Titulo");
+            dgvLibros.Columns.Add("autor", "Autor");
             dgvLibros.Columns.Add("estado", "Estado");
 
+            dgvLibros.Columns["ISBN"].ReadOnly = true;
             dgvLibros.Columns["titulo"].ReadOnly = true;
             dgvLibros.Columns["autor"].ReadOnly=true;
-            dgvLibros.Columns["ISBN"].ReadOnly = true;
             dgvLibros.Columns["estado"].ReadOnly = true;
 
             DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
@@ -92,14 +92,26 @@ namespace BibliotecaSegundaEdicion
         }
         private void cargarDatosLibros()
         {
+            gestionLibros.ISBN = getISBNIfExist();
             gestionLibros.titulo = txtTitulo.Text.Trim();
             gestionLibros.autor = txtAutor.Text.Trim();
-            gestionLibros.ISBN = Convert.ToInt32(txtISBN.Text.Trim());
             gestionLibros.disponibilidad = cmbEstado.SelectedItem.ToString();
+        }
+        private int getISBNIfExist()
+        {
+            if (!txtISBN.Text.Trim().Equals(""))
+            {
+                if (int.TryParse(txtISBN.Text, out int ISBN))
+                {
+                    return ISBN;
+                }
+                else return -1; 
+            }
+            return -1;
         }
         private bool DatosCorrectos()
         {
-            if (txtTitulo.Text.Trim().Equals("") || txtAutor.Text.Trim().Equals("") || txtISBN.Text.Trim().Equals(""))
+            if (txtTitulo.Text.Trim().Equals("") || txtAutor.Text.Trim().Equals(""))
             {
                 MessageBox.Show("Ingrese Todos los datos");
                 return false;
@@ -118,7 +130,11 @@ namespace BibliotecaSegundaEdicion
             {
                 if (e.ColumnIndex == dgvLibros.Columns["btnEditar"].Index)
                 {
-
+                    DataGridViewRow fila = dgvLibros.Rows[e.RowIndex];
+                    txtISBN.Text = Convert.ToString(fila.Cells["ISBN"].Value);
+                    txtTitulo.Text = Convert.ToString(fila.Cells["titulo"].Value);
+                    txtAutor.Text = Convert.ToString(fila.Cells["autor"].Value);
+                    cmbEstado.SelectedItem = Convert.ToString(fila.Cells["estado"].Value);
                 }
                 if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index)
                 {
@@ -128,7 +144,18 @@ namespace BibliotecaSegundaEdicion
                     CargarProductos();
                 }
             }
-
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (!DatosCorrectos())
+            {
+                return;
+            }
+            cargarDatosLibros();
+            if (consulta.EditLibro(gestionLibros))
+            {
+                CargarProductos();
+            }
         }
     }
 }
