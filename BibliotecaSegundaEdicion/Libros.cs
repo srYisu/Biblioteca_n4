@@ -25,8 +25,6 @@ namespace BibliotecaSegundaEdicion
             libros = new List<GestionLibros>();
             consulta = new ConsultaLibros();
             gestionLibros = new GestionLibros();
-            CargarProductos();
-
             txtBuscador.Text = buscador;
             
             // Deshabilitar la capacidad de mover el formulario
@@ -34,6 +32,7 @@ namespace BibliotecaSegundaEdicion
             this.TopLevel = false; // Importante para ser embebido en el Panel
             this.Dock = DockStyle.Fill; // Ajustar al contenedor
             this.AutoScaleMode = AutoScaleMode.None;
+            CargarProductos();
         }
         private void CargarProductos(string filtro = "")
         {

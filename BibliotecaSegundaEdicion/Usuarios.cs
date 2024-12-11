@@ -24,8 +24,8 @@ namespace BibliotecaSegundaEdicion
 
             InitializeComponent();
             CargarTabla();
-            CargarUsuarios();
             txtBuscador.Text = buscador;
+            CargarUsuarios();
         }
 
         private void CargarTabla()
@@ -153,4 +153,3 @@ namespace BibliotecaSegundaEdicion
         }
     }
 }
-
