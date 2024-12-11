@@ -194,6 +194,11 @@ namespace BibliotecaSegundaEdicion
                 txtBuscador.Text = buscador;
             }
         }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            CargarProductos(txtBuscador.Text.Trim());
+        }
     }
 }
 
