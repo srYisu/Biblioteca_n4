@@ -107,6 +107,12 @@
     <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="BaseDeDatos\ConexionMySQL.cs" />
     <Compile Include="Errores.cs" />
+    <Compile Include="FormBlanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBlanco.Designer.cs">
+      <DependentUpon>FormBlanco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prestamos\ConsultaPrestamos.cs" />
     <Compile Include="Prestamos\GestionPrestamos.cs" />
     <Compile Include="GestionUsuarios\ConsultaUsuarios.cs" />
