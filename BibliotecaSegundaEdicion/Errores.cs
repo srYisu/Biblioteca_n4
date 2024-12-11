@@ -11,7 +11,7 @@ namespace BibliotecaSegundaEdicion
     {
         public void RegistrarError(string mensajeError)
         {
-            string rutaArchivo = "Errores.txt";
+            string rutaArchivo = "C:/Users/rocha/Source/Repos/Biblioteca_n4/BibliotecaSegundaEdicion/Errores.txt";
             string mensajeConMarcaDeTiempo = $"{DateTime.Now}: {mensajeError}\n";
             try
             {

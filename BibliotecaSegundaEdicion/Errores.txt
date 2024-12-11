@@ -1,0 +1,3 @@
+﻿11/12/2024 03:25:13 a. m.: No se puede calcular la raíz cuadrada de un número negativo.
+11/12/2024 03:25:16 a. m.: Por favor, ingrese un número válido.
+11/12/2024 03:25:22 a. m.: Por favor, ingrese un número válido.

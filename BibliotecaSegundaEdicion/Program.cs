@@ -16,7 +16,7 @@ namespace BibliotecaSegundaEdicion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBlanco());
+            Application.Run(new Form1());
         }
     }
 }
