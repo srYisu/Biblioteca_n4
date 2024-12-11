@@ -81,6 +81,30 @@ namespace BibliotecaSegundaEdicion
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
             return mCommand.ExecuteNonQuery() > 0;
         }
+        public bool EditLibroEstado(GestionPrestamos libros)
+        {
+            string UPDATE = "UPDATE libros SET titulo = @titulo, autor = @autor, disponibilidad = @disponibilidad WHERE ISBN = @ISBN;";
+
+            MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
+
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", libros.titulo));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", libros.autor));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", "Prestamo"));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
+            return mCommand.ExecuteNonQuery() > 0;
+        }
+        public bool EditLibroDisponible(GestionPrestamos libros)
+        {
+            string UPDATE = "UPDATE libros SET titulo = @titulo, autor = @autor, disponibilidad = @disponibilidad WHERE ISBN = @ISBN;";
+
+            MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
+
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@titulo", libros.titulo));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@autor", libros.autor));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@disponibilidad", "Disponible"));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", libros.ISBN));
+            return mCommand.ExecuteNonQuery() > 0;
+        }
 
         public bool eliminarLibro(int Isbn)
         {

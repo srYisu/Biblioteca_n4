@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.X509;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,10 @@ namespace BibliotecaSegundaEdicion
         private ConsultaLibros consulta;
         private ConsultaUsuarios consultaUsuarios;
         private List<GestionLibros> librosDisponibles;
-        private List<GestionLibros> librosPrestamo;
-        private List<GestionUsuarios> usuariosPrestamo;
-        private List<GestionPrestamos> prestamosActivos;
+        private List<GestionPrestamos> prestamos;
+        private ConsultaPrestamos consultaPrestamos;
+        private GestionPrestamos gestionPrestamos;
+        private List<GestionUsuarios> usuariosP;
         public Prestamos()
         {
             libros = new List<GestionLibros>();
@@ -27,14 +29,16 @@ namespace BibliotecaSegundaEdicion
             usuarios = new List<GestionUsuarios>();
             consultaUsuarios = new ConsultaUsuarios();
             librosDisponibles = new List<GestionLibros>();
-            librosPrestamo = new List<GestionLibros>();
+            prestamos = new List<GestionPrestamos>();
+            consultaPrestamos = new ConsultaPrestamos();
+            gestionPrestamos = new GestionPrestamos();
+            usuariosP = new List<GestionUsuarios>();
             InitializeComponent();
             ConfigurarTabla();
-
+            CargarPrestamos();
             ObtenerLibros();
             ObtenerUsuarios();
             LLenarComboBoxLibros();
-            PrestamosPendientes();
         }
 
         private void Prestamos_Load(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace BibliotecaSegundaEdicion
                 if (usuarios.tipoUsuario.ToString() == tipoUsuario)
                 {
                     cbmUsuario.Items.Add(usuarios.nombre);
-                    usuariosPrestamo.Add(usuarios);
+                    usuariosP.Add(usuarios);
                 }
             }
         }
@@ -74,10 +78,6 @@ namespace BibliotecaSegundaEdicion
                 {
                     cbmLibro.Items.Add(libro.titulo);
                     librosDisponibles.Add(libro);
-                }
-                else
-                {
-                    librosPrestamo.Add(libro);
                 }
                 
             }
@@ -108,31 +108,71 @@ namespace BibliotecaSegundaEdicion
             btnFinalizar.UseColumnTextForButtonValue = true;
             dgvPrestamos.Columns.Add(btnFinalizar);
         }
-        private void PrestamosPendientes()
-        {
-            dgvPrestamos.Rows.Clear();
-            dgvPrestamos.Refresh();
-            foreach (var li in librosPrestamo)
-            {
-                dgvPrestamos.Rows.Add(
-                    li.ISBN,
-                    li.titulo,
-                    li.autor,
-                    li.disponibilidad,
-                    "a",
-                    "6");
-            }
-        }
+
         private void cmbTipoDeUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tipo = cmbTipoDeUsuario.SelectedItem.ToString();
             LlenarComboBoxUsuario(tipo);
         }
+        private void CargarPrestamos(string filtro = "")
+        {
+            dgvPrestamos.Rows.Clear();
+            dgvPrestamos.Refresh();
+            prestamos.Clear();
+            prestamos = consultaPrestamos.GetPrestamos(filtro);
 
+            foreach (var pre in prestamos)
+            {
+                dgvPrestamos.Rows.Add(pre.usuario, pre.id, pre.titulo, pre.autor,
+                    pre.ISBN, pre.estado);
+            }
+
+        }
+        private void CargarDatos()
+        {
+            foreach (var usu in usuariosP)
+            {
+                foreach(var dis in librosDisponibles)
+                {
+                    if (usu.nombre.ToString() == cbmUsuario.SelectedItem.ToString() && dis.titulo.ToString() == cbmLibro.SelectedItem.ToString())
+                    {
+                        gestionPrestamos.usuario = usu.nombre;
+                        gestionPrestamos.id = usu.id;
+                        gestionPrestamos.titulo = dis.titulo;
+                        gestionPrestamos.autor = dis.autor;
+                        gestionPrestamos.ISBN = dis.ISBN;
+                        gestionPrestamos.estado = "Prestamo";
+                    }
+                }
+            }
+        }
         private void btnGuardarPrestamo_Click(object sender, EventArgs e)
         {
-            string usuarioText = cbmUsuario.SelectedItem.ToString();
-            string libroText = cbmLibro.SelectedItem.ToString();
+            CargarDatos();
+            if (consultaPrestamos.AddPrestamo(gestionPrestamos))
+            {
+                consulta.EditLibroEstado(gestionPrestamos);
+                MessageBox.Show("Productos agregados correctamente");
+                CargarPrestamos();
+                LLenarComboBoxLibros();
+            }
+            LLenarComboBoxLibros();
+        }
+
+        private void dgvPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >=0)
+            {
+                if (e.ColumnIndex == dgvPrestamos.Columns["btnFinalizar"].Index)
+                {
+                    int ISbn = Convert.ToInt32(dgvPrestamos.Rows[e.RowIndex].Cells["ISBN"].Value);
+                    consultaPrestamos.finalizarPrestamo(ISbn);
+                    CargarPrestamos();
+                    CargarDatos();
+                    consulta.EditLibroDisponible(gestionPrestamos);
+                    LLenarComboBoxLibros();
+                }
+            }
         }
     }
 }
