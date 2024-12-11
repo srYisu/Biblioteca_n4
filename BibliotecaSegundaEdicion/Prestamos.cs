@@ -19,7 +19,7 @@ namespace BibliotecaSegundaEdicion
         private List<GestionLibros> librosDisponibles;
         private List<GestionLibros> librosPrestamo;
         private List<GestionUsuarios> usuariosPrestamo;
-
+        private List<GestionPrestamos> prestamosActivos;
         public Prestamos()
         {
             libros = new List<GestionLibros>();
@@ -50,7 +50,7 @@ namespace BibliotecaSegundaEdicion
                 if (usuarios.tipoUsuario.ToString() == tipoUsuario)
                 {
                     cbmUsuario.Items.Add(usuarios.nombre);
-                    //usuariosPrestamo.Add();
+                    usuariosPrestamo.Add(usuarios);
                 }
             }
         }
@@ -127,6 +127,12 @@ namespace BibliotecaSegundaEdicion
         {
             string tipo = cmbTipoDeUsuario.SelectedItem.ToString();
             LlenarComboBoxUsuario(tipo);
+        }
+
+        private void btnGuardarPrestamo_Click(object sender, EventArgs e)
+        {
+            string usuarioText = cbmUsuario.SelectedItem.ToString();
+            string libroText = cbmLibro.SelectedItem.ToString();
         }
     }
 }

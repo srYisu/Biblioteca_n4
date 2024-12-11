@@ -159,11 +159,12 @@
             this.btnGuardarPrestamo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarPrestamo.ForeColor = System.Drawing.Color.White;
             this.btnGuardarPrestamo.Location = new System.Drawing.Point(789, 201);
-            this.btnGuardarPrestamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarPrestamo.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarPrestamo.Name = "btnGuardarPrestamo";
             this.btnGuardarPrestamo.Size = new System.Drawing.Size(231, 44);
             this.btnGuardarPrestamo.TabIndex = 6;
             this.btnGuardarPrestamo.Text = "Guardar";
+            this.btnGuardarPrestamo.Click += new System.EventHandler(this.btnGuardarPrestamo_Click);
             // 
             // lblUsuario
             // 
@@ -205,7 +206,7 @@
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.image__6_;
             this.picLogoPagina.ImageRotate = 0F;
             this.picLogoPagina.Location = new System.Drawing.Point(907, 15);
-            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4);
             this.picLogoPagina.Name = "picLogoPagina";
             this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
