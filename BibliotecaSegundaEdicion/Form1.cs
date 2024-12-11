@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace BibliotecaSegundaEdicion
     public partial class Form1 : Form
     {
         AbrirForms open = new AbrirForms();
-
+        Errores errores = new Errores();
         string contra = "Contraseña";
         string us = "Usuario";
         public Form1()
@@ -68,27 +69,43 @@ namespace BibliotecaSegundaEdicion
         string contrasena = "111";
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string usuarioIngresado = txtUsuario.Text;
-            string contrasenaIngresada = txtContrasena.Text;
-
-            if (contrasena == contrasenaIngresada && usuario == usuarioIngresado)
+            try
             {
-                picLogoCentrado.Visible = false;
-                btnLibro.Visible = true;
-                btnPrestamo.Visible = true;
-                btnReportes.Visible = true;
-                btnUsuarios.Visible = true;
-                picLogo.Visible = true;
-                btnIniciarSesion.Visible = false;
-                tgsMostrarContraseña.Visible = false;
+                string usuarioIngresado = txtUsuario.Text;
+                string contrasenaIngresada = txtContrasena.Text;
 
-                txtContrasena.Visible = false;
-                txtUsuario.Visible = false;
-                picInicioSesionFoto.Visible = false;
+                // Validar credenciales
+                if (contrasena == contrasenaIngresada && usuario == usuarioIngresado)
+                {
+                    picLogoCentrado.Visible = false;
+                    btnLibro.Visible = true;
+                    btnPrestamo.Visible = true;
+                    btnReportes.Visible = true;
+                    btnUsuarios.Visible = true;
+                    picLogo.Visible = true;
+                    btnIniciarSesion.Visible = false;
+                    tgsMostrarContraseña.Visible = false;
+
+                    txtContrasena.Visible = false;
+                    txtUsuario.Visible = false;
+                    picInicioSesionFoto.Visible = false;
+
+                    MessageBox.Show("Inicio de sesión exitoso.");
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos.");
+                }
             }
-            else
+            catch (ArgumentException ex) // Excepción específica para campos vacíos
             {
-                MessageBox.Show("Datos incorrectos");
+                errores.RegistrarError("Error inesperado en btnIniciarSesion_Click: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex) // Captura de cualquier otro error inesperado
+            {
+                errores.RegistrarError("Error inesperado en btnIniciarSesion_Click: " + ex.Message);
+                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
