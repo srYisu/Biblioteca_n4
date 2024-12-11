@@ -16,6 +16,9 @@ namespace BibliotecaSegundaEdicion
         private List<GestionUsuarios> usuarios;
         private ConsultaLibros consulta;
         private ConsultaUsuarios consultaUsuarios;
+        private List<GestionLibros> librosDisponibles;
+        private List<GestionLibros> librosPrestamo;
+        private List<GestionUsuarios> usuariosPrestamo;
 
         public Prestamos()
         {
@@ -23,12 +26,15 @@ namespace BibliotecaSegundaEdicion
             consulta = new ConsultaLibros();
             usuarios = new List<GestionUsuarios>();
             consultaUsuarios = new ConsultaUsuarios();
+            librosDisponibles = new List<GestionLibros>();
+            librosPrestamo = new List<GestionLibros>();
             InitializeComponent();
             ConfigurarTabla();
-            
+
             ObtenerLibros();
             ObtenerUsuarios();
             LLenarComboBoxLibros();
+            PrestamosPendientes();
         }
 
         private void Prestamos_Load(object sender, EventArgs e)
@@ -44,6 +50,7 @@ namespace BibliotecaSegundaEdicion
                 if (usuarios.tipoUsuario.ToString() == tipoUsuario)
                 {
                     cbmUsuario.Items.Add(usuarios.nombre);
+
                 }
             }
         }
@@ -66,7 +73,13 @@ namespace BibliotecaSegundaEdicion
                 if (libro.disponibilidad.ToString() == dis)
                 {
                     cbmLibro.Items.Add(libro.titulo);
+                    librosDisponibles.Add(libro);
                 }
+                else
+                {
+                    librosPrestamo.Add(libro);
+                }
+                
             }
         }
 
@@ -95,7 +108,21 @@ namespace BibliotecaSegundaEdicion
             btnFinalizar.UseColumnTextForButtonValue = true;
             dgvPrestamos.Columns.Add(btnFinalizar);
         }
-
+        private void PrestamosPendientes()
+        {
+            dgvPrestamos.Rows.Clear();
+            dgvPrestamos.Refresh();
+            foreach (var li in librosPrestamo)
+            {
+                dgvPrestamos.Rows.Add(
+                    li.ISBN,
+                    li.titulo,
+                    li.autor,
+                    li.disponibilidad,
+                    "a",
+                    "6");
+            }
+        }
         private void cmbTipoDeUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tipo = cmbTipoDeUsuario.SelectedItem.ToString();
