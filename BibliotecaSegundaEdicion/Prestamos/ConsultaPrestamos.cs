@@ -6,11 +6,13 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BibliotecaSegundaEdicion
 {
     internal class ConsultaPrestamos
     {
+        Errores errores = new Errores();
         private ConexionMySQL conexionMySQL;
         private List<GestionPrestamos> prestamos;
 
@@ -22,42 +24,57 @@ namespace BibliotecaSegundaEdicion
 
         public List<GestionPrestamos> GetPrestamos(string filtro)
         {
-            string QUERY = "SELECT * From prestamos";
+            string QUERY = "SELECT * FROM prestamos";
             MySqlDataReader mReader = null;
+            List<GestionPrestamos> prestamos = new List<GestionPrestamos>();
+
             try
             {
-                if (filtro != null)
+                if (!string.IsNullOrWhiteSpace(filtro)) // Validar que el filtro no sea nulo o vacío
                 {
                     QUERY += " WHERE " +
-                    "Usuario LIKE '%" + filtro + "%' OR " +
+                    "usuario LIKE '%" + filtro + "%' OR " +
                     "id LIKE '%" + filtro + "%' OR " +
                     "titulo LIKE '%" + filtro + "%' OR " +
                     "autor LIKE '%" + filtro + "%' OR " +
                     "ISBN LIKE '%" + filtro + "%' OR " +
-                    "disponibilidad LIKE '%" + "%';";
+                    "disponibilidad LIKE '%" + filtro + "%';";
                 }
-                MySqlCommand mComando = new MySqlCommand(QUERY);
-                mComando.Connection = conexionMySQL.GetConnection();
-                mReader = mComando.ExecuteReader();
 
-                GestionPrestamos prestamo = null;
-                while (mReader.Read())
+                using (MySqlCommand mComando = new MySqlCommand(QUERY, conexionMySQL.GetConnection()))
                 {
-                    prestamo = new GestionPrestamos();
-                    prestamo.usuario = mReader.GetString("usuario");
-                    prestamo.id = mReader.GetInt32("id");
-                    prestamo.titulo = mReader.GetString("titulo");
-                    prestamo.autor = mReader.GetString("autor");
-                    prestamo.ISBN = mReader.GetInt32("ISBN");
-                    prestamo.estado = mReader.GetString("disponibilidad");
-                    prestamos.Add(prestamo);
+                    mReader = mComando.ExecuteReader();
+
+                    while (mReader.Read())
+                    {
+                        GestionPrestamos prestamo = new GestionPrestamos
+                        {
+                            usuario = mReader.GetString("usuario"),
+                            id = mReader.GetInt32("id"),
+                            titulo = mReader.GetString("titulo"),
+                            autor = mReader.GetString("autor"),
+                            ISBN = mReader.GetInt32("ISBN"),
+                            estado = mReader.GetString("disponibilidad")
+                        };
+                        prestamos.Add(prestamo);
+                    }
                 }
-                mReader.Close();
             }
-            catch (Exception)
+            catch (MySqlException ex) // Manejo de errores específicos de MySQL
             {
-                throw;
+                errores.RegistrarError("Error de base de datos en la consulta de préstamos: " + ex.Message);
+                MessageBox.Show("Error al consultar los préstamos en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (Exception ex) // Manejo de otros errores generales
+            {
+                errores.RegistrarError("Error inesperado en la consulta de préstamos: " + ex.Message);
+                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mReader?.Close(); // Asegurar que el lector se cierre si fue inicializado
+            }
+
             return prestamos;
         }
 

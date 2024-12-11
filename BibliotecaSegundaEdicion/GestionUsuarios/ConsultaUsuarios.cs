@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BibliotecaSegundaEdicion
 {
     internal class ConsultaUsuarios
     {
+        Errores errores = new Errores();
         private ConexionMySQL conexionMySQL;
         private List<GestionUsuarios> usuarios;
         public ConsultaUsuarios()
@@ -18,34 +20,49 @@ namespace BibliotecaSegundaEdicion
         }
         public List<GestionUsuarios> GetUsuario(string filtro)
         {
-            string QUERY = "SELECT * From usuarios";
+            string QUERY = "SELECT * FROM usuarios";
             MySqlDataReader mReader = null;
+            List<GestionUsuarios> usuarios = new List<GestionUsuarios>();
+
             try
             {
-                if (filtro != null)
+                if (!string.IsNullOrWhiteSpace(filtro)) // Validar que el filtro no sea nulo o vacío
                 {
                     QUERY += " WHERE " +
                     "id LIKE '%" + filtro + "%' OR " +
                     "nombre LIKE '%" + filtro + "%' OR " +
                     "tipo LIKE '%" + filtro + "%';";
                 }
-                MySqlCommand mComando = new MySqlCommand(QUERY);
-                mComando.Connection = conexionMySQL.GetConnection();
-                mReader = mComando.ExecuteReader();
 
-                GestionUsuarios usuario = null;
-                while (mReader.Read())
+                using (MySqlCommand mComando = new MySqlCommand(QUERY, conexionMySQL.GetConnection()))
                 {
-                    usuario = new GestionUsuarios();
-                    usuario.id = mReader.GetInt32("id");
-                    usuario.nombre = mReader.GetString("nombre");
-                    usuario.tipoUsuario = mReader.GetString("tipo");
-                    usuarios.Add(usuario);
+                    mReader = mComando.ExecuteReader();
+
+                    while (mReader.Read())
+                    {
+                        GestionUsuarios usuario = new GestionUsuarios
+                        {
+                            id = mReader.GetInt32("id"),
+                            nombre = mReader.GetString("nombre"),
+                            tipoUsuario = mReader.GetString("tipo")
+                        };
+                        usuarios.Add(usuario);
+                    }
                 }
-                mReader.Close();
-            }catch (Exception)
+            }
+            catch (MySqlException ex) // Errores específicos de MySQL
             {
-                throw;
+                errores.RegistrarError("Error de base de datos en la consulta de usuarios: " + ex.Message);
+                MessageBox.Show("Error al consultar los usuarios en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex) // Otros errores inesperados
+            {
+                errores.RegistrarError("Error inesperado en la consulta de usuarios: " + ex.Message);
+                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mReader?.Close(); // Cerrar el lector de datos si está abierto
             }
             return usuarios;
         }

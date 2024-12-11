@@ -1,14 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BibliotecaSegundaEdicion
 {
     internal class ConsultaLibros
     {
+        Errores errores = new Errores();
         private ConexionMySQL conexionMySQL;
         private List<GestionLibros> libros;
 
@@ -22,9 +25,10 @@ namespace BibliotecaSegundaEdicion
         {
             string QUERY = "SELECT * From libros";
             MySqlDataReader mReader = null;
+
             try
             {
-                if (filtro != null)
+                if (!string.IsNullOrWhiteSpace(filtro)) // Validar que el filtro no sea nulo o vacío
                 {
                     QUERY += " WHERE " +
                     "ISBN LIKE '%" + filtro + "%' OR " +
@@ -33,26 +37,38 @@ namespace BibliotecaSegundaEdicion
                     "disponibilidad LIKE '%" + filtro + "%';";
                 }
 
-                MySqlCommand mComando = new MySqlCommand(QUERY);
-                mComando.Connection = conexionMySQL.GetConnection();
-                mReader = mComando.ExecuteReader();
-
-                GestionLibros libro = null;
-                while (mReader.Read())
+                using (MySqlCommand mComando = new MySqlCommand(QUERY, conexionMySQL.GetConnection()))
                 {
-                    libro = new GestionLibros();
-                    libro.ISBN = mReader.GetInt32("ISBN");
-                    libro.titulo = mReader.GetString("titulo");
-                    libro.autor = mReader.GetString("autor");
-                    libro.disponibilidad = mReader.GetString("disponibilidad");
-                    libros.Add(libro);
+                    mReader = mComando.ExecuteReader();
+
+                    while (mReader.Read())
+                    {
+                        GestionLibros libro = new GestionLibros
+                        {
+                            ISBN = mReader.GetInt32("ISBN"),
+                            titulo = mReader.GetString("titulo"),
+                            autor = mReader.GetString("autor"),
+                            disponibilidad = mReader.GetString("disponibilidad")
+                        };
+                        libros.Add(libro);
+                    }
                 }
-                mReader.Close();
             }
-            catch (Exception)
+            catch (MySqlException ex) // Manejar errores específicos de MySQL
             {
-                throw;
+                errores.RegistrarError("Error de base de datos en la consulta de libros: " + ex.Message);
+                MessageBox.Show("Error al consultar los libros en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (Exception ex) // Capturar cualquier otro error inesperado
+            {
+                errores.RegistrarError("Error inesperado en la consulta de libros: " + ex.Message);
+                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mReader?.Close(); // Asegurar que el lector de datos se cierra, incluso si ocurre un error
+            }
+
             return libros;
         }
         internal bool AddLibro(GestionLibros libros)
