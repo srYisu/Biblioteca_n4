@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace BibliotecaSegundaEdicion
 {
+    
     public partial class Libros : Form
     {
+        string buscador = "Buscador";
+
         private List<GestionLibros> libros;
         private ConsultaLibros consulta;
         private GestionLibros gestionLibros;
@@ -24,6 +27,8 @@ namespace BibliotecaSegundaEdicion
             gestionLibros = new GestionLibros();
             CargarProductos();
 
+            txtBuscador.Text = buscador;
+            
             // Deshabilitar la capacidad de mover el formulario
             this.FormBorderStyle = FormBorderStyle.None; // Sin borde
             this.TopLevel = false; // Importante para ser embebido en el Panel
@@ -172,6 +177,22 @@ namespace BibliotecaSegundaEdicion
         private void lblISBN_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBuscador_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscador.Text == buscador)
+            {
+                txtBuscador.Text = "";
+            }
+        }
+
+        private void txtBuscador_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscador.Text))
+            {
+                txtBuscador.Text = buscador;
+            }
         }
     }
 }

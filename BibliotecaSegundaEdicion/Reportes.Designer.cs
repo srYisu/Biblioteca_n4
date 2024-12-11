@@ -135,7 +135,7 @@
             this.rbtnPrestamosActivos.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.rbtnPrestamosActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnPrestamosActivos.CheckedState.InnerOffset = -4;
-            this.rbtnPrestamosActivos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnPrestamosActivos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.rbtnPrestamosActivos.Location = new System.Drawing.Point(84, 122);
             this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnPrestamosActivos.Name = "rbtnPrestamosActivos";
@@ -205,7 +205,7 @@
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.carpeta_abierta;
             this.picLogoPagina.ImageRotate = 0F;
             this.picLogoPagina.Location = new System.Drawing.Point(907, 11);
-            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4);
             this.picLogoPagina.Name = "picLogoPagina";
             this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +217,7 @@
             // 
             this.pnlPrestamosActivos.Controls.Add(this.dgvPrestamos);
             this.pnlPrestamosActivos.Location = new System.Drawing.Point(33, 214);
-            this.pnlPrestamosActivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPrestamosActivos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPrestamosActivos.Name = "pnlPrestamosActivos";
             this.pnlPrestamosActivos.Size = new System.Drawing.Size(1012, 444);
             this.pnlPrestamosActivos.TabIndex = 13;
@@ -226,7 +226,7 @@
             // 
             this.pnlLibrosDisponibles.Controls.Add(this.dgvLibrosDisponibles);
             this.pnlLibrosDisponibles.Location = new System.Drawing.Point(16, 203);
-            this.pnlLibrosDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLibrosDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLibrosDisponibles.Name = "pnlLibrosDisponibles";
             this.pnlLibrosDisponibles.Size = new System.Drawing.Size(1012, 444);
             this.pnlLibrosDisponibles.TabIndex = 14;
@@ -302,7 +302,7 @@
             // 
             this.pnlUsuariosPrestamo.Controls.Add(this.dgvUsuariosPrestamo);
             this.pnlUsuariosPrestamo.Location = new System.Drawing.Point(24, 196);
-            this.pnlUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUsuariosPrestamo.Name = "pnlUsuariosPrestamo";
             this.pnlUsuariosPrestamo.Size = new System.Drawing.Size(1012, 459);
             this.pnlUsuariosPrestamo.TabIndex = 15;
