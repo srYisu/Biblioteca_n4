@@ -88,9 +88,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrestamos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPrestamos.Location = new System.Drawing.Point(3, 2);
-            this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPrestamos.Location = new System.Drawing.Point(2, 2);
+            this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPrestamos.Name = "dgvPrestamos";
+            this.dgvPrestamos.ReadOnly = true;
             this.dgvPrestamos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -103,7 +104,7 @@
             this.dgvPrestamos.RowHeadersVisible = false;
             this.dgvPrestamos.RowHeadersWidth = 51;
             this.dgvPrestamos.RowTemplate.Height = 24;
-            this.dgvPrestamos.Size = new System.Drawing.Size(979, 423);
+            this.dgvPrestamos.Size = new System.Drawing.Size(734, 344);
             this.dgvPrestamos.TabIndex = 5;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -118,7 +119,7 @@
             this.dgvPrestamos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPrestamos.ThemeStyle.HeaderStyle.Height = 24;
-            this.dgvPrestamos.ThemeStyle.ReadOnly = false;
+            this.dgvPrestamos.ThemeStyle.ReadOnly = true;
             this.dgvPrestamos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPrestamos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,10 +137,10 @@
             this.rbtnPrestamosActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnPrestamosActivos.CheckedState.InnerOffset = -4;
             this.rbtnPrestamosActivos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.rbtnPrestamosActivos.Location = new System.Drawing.Point(84, 122);
-            this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnPrestamosActivos.Location = new System.Drawing.Point(63, 99);
+            this.rbtnPrestamosActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnPrestamosActivos.Name = "rbtnPrestamosActivos";
-            this.rbtnPrestamosActivos.Size = new System.Drawing.Size(230, 36);
+            this.rbtnPrestamosActivos.Size = new System.Drawing.Size(184, 29);
             this.rbtnPrestamosActivos.TabIndex = 6;
             this.rbtnPrestamosActivos.Text = "Prestamos activos";
             this.rbtnPrestamosActivos.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -156,10 +157,10 @@
             this.rbtnLibrosDispoibles.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnLibrosDispoibles.CheckedState.InnerOffset = -4;
             this.rbtnLibrosDispoibles.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnLibrosDispoibles.Location = new System.Drawing.Point(401, 122);
-            this.rbtnLibrosDispoibles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnLibrosDispoibles.Location = new System.Drawing.Point(301, 99);
+            this.rbtnLibrosDispoibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnLibrosDispoibles.Name = "rbtnLibrosDispoibles";
-            this.rbtnLibrosDispoibles.Size = new System.Drawing.Size(228, 36);
+            this.rbtnLibrosDispoibles.Size = new System.Drawing.Size(182, 29);
             this.rbtnLibrosDispoibles.TabIndex = 7;
             this.rbtnLibrosDispoibles.Text = "Libros disponibles";
             this.rbtnLibrosDispoibles.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -176,10 +177,10 @@
             this.rbtnUsuariosPrestamo.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbtnUsuariosPrestamo.CheckedState.InnerOffset = -4;
             this.rbtnUsuariosPrestamo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnUsuariosPrestamo.Location = new System.Drawing.Point(689, 106);
-            this.rbtnUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnUsuariosPrestamo.Location = new System.Drawing.Point(517, 86);
+            this.rbtnUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnUsuariosPrestamo.Name = "rbtnUsuariosPrestamo";
-            this.rbtnUsuariosPrestamo.Size = new System.Drawing.Size(284, 68);
+            this.rbtnUsuariosPrestamo.Size = new System.Drawing.Size(225, 54);
             this.rbtnUsuariosPrestamo.TabIndex = 8;
             this.rbtnUsuariosPrestamo.Text = "Usuarios con prestamo\r\npendiente\r\n";
             this.rbtnUsuariosPrestamo.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -192,10 +193,9 @@
             this.lblNombrePagina.AutoSize = true;
             this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePagina.Location = new System.Drawing.Point(448, 11);
-            this.lblNombrePagina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombrePagina.Location = new System.Drawing.Point(336, 9);
             this.lblNombrePagina.Name = "lblNombrePagina";
-            this.lblNombrePagina.Size = new System.Drawing.Size(162, 46);
+            this.lblNombrePagina.Size = new System.Drawing.Size(133, 37);
             this.lblNombrePagina.TabIndex = 11;
             this.lblNombrePagina.Text = "Reportes";
             // 
@@ -204,10 +204,9 @@
             this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.carpeta_abierta;
             this.picLogoPagina.ImageRotate = 0F;
-            this.picLogoPagina.Location = new System.Drawing.Point(907, 11);
-            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogoPagina.Location = new System.Drawing.Point(680, 9);
             this.picLogoPagina.Name = "picLogoPagina";
-            this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
+            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoPagina.TabIndex = 12;
             this.picLogoPagina.TabStop = false;
@@ -216,19 +215,17 @@
             // pnlPrestamosActivos
             // 
             this.pnlPrestamosActivos.Controls.Add(this.dgvPrestamos);
-            this.pnlPrestamosActivos.Location = new System.Drawing.Point(33, 214);
-            this.pnlPrestamosActivos.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPrestamosActivos.Location = new System.Drawing.Point(25, 174);
             this.pnlPrestamosActivos.Name = "pnlPrestamosActivos";
-            this.pnlPrestamosActivos.Size = new System.Drawing.Size(1012, 444);
+            this.pnlPrestamosActivos.Size = new System.Drawing.Size(759, 361);
             this.pnlPrestamosActivos.TabIndex = 13;
             // 
             // pnlLibrosDisponibles
             // 
             this.pnlLibrosDisponibles.Controls.Add(this.dgvLibrosDisponibles);
-            this.pnlLibrosDisponibles.Location = new System.Drawing.Point(16, 203);
-            this.pnlLibrosDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLibrosDisponibles.Location = new System.Drawing.Point(12, 165);
             this.pnlLibrosDisponibles.Name = "pnlLibrosDisponibles";
-            this.pnlLibrosDisponibles.Size = new System.Drawing.Size(1012, 444);
+            this.pnlLibrosDisponibles.Size = new System.Drawing.Size(730, 343);
             this.pnlLibrosDisponibles.TabIndex = 14;
             // 
             // dgvLibrosDisponibles
@@ -259,9 +256,10 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLibrosDisponibles.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLibrosDisponibles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLibrosDisponibles.Location = new System.Drawing.Point(20, 4);
-            this.dgvLibrosDisponibles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLibrosDisponibles.Location = new System.Drawing.Point(15, 3);
+            this.dgvLibrosDisponibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLibrosDisponibles.Name = "dgvLibrosDisponibles";
+            this.dgvLibrosDisponibles.ReadOnly = true;
             this.dgvLibrosDisponibles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
@@ -274,7 +272,7 @@
             this.dgvLibrosDisponibles.RowHeadersVisible = false;
             this.dgvLibrosDisponibles.RowHeadersWidth = 51;
             this.dgvLibrosDisponibles.RowTemplate.Height = 24;
-            this.dgvLibrosDisponibles.Size = new System.Drawing.Size(979, 436);
+            this.dgvLibrosDisponibles.Size = new System.Drawing.Size(755, 365);
             this.dgvLibrosDisponibles.TabIndex = 5;
             this.dgvLibrosDisponibles.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLibrosDisponibles.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -289,7 +287,7 @@
             this.dgvLibrosDisponibles.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvLibrosDisponibles.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvLibrosDisponibles.ThemeStyle.HeaderStyle.Height = 24;
-            this.dgvLibrosDisponibles.ThemeStyle.ReadOnly = false;
+            this.dgvLibrosDisponibles.ThemeStyle.ReadOnly = true;
             this.dgvLibrosDisponibles.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLibrosDisponibles.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvLibrosDisponibles.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,10 +299,9 @@
             // pnlUsuariosPrestamo
             // 
             this.pnlUsuariosPrestamo.Controls.Add(this.dgvUsuariosPrestamo);
-            this.pnlUsuariosPrestamo.Location = new System.Drawing.Point(24, 196);
-            this.pnlUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlUsuariosPrestamo.Location = new System.Drawing.Point(18, 159);
             this.pnlUsuariosPrestamo.Name = "pnlUsuariosPrestamo";
-            this.pnlUsuariosPrestamo.Size = new System.Drawing.Size(1012, 459);
+            this.pnlUsuariosPrestamo.Size = new System.Drawing.Size(753, 373);
             this.pnlUsuariosPrestamo.TabIndex = 15;
             // 
             // dgvUsuariosPrestamo
@@ -335,9 +332,10 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuariosPrestamo.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvUsuariosPrestamo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsuariosPrestamo.Location = new System.Drawing.Point(12, 21);
-            this.dgvUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUsuariosPrestamo.Location = new System.Drawing.Point(9, 17);
+            this.dgvUsuariosPrestamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvUsuariosPrestamo.Name = "dgvUsuariosPrestamo";
+            this.dgvUsuariosPrestamo.ReadOnly = true;
             this.dgvUsuariosPrestamo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
@@ -350,7 +348,7 @@
             this.dgvUsuariosPrestamo.RowHeadersVisible = false;
             this.dgvUsuariosPrestamo.RowHeadersWidth = 51;
             this.dgvUsuariosPrestamo.RowTemplate.Height = 24;
-            this.dgvUsuariosPrestamo.Size = new System.Drawing.Size(979, 423);
+            this.dgvUsuariosPrestamo.Size = new System.Drawing.Size(734, 344);
             this.dgvUsuariosPrestamo.TabIndex = 5;
             this.dgvUsuariosPrestamo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsuariosPrestamo.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -365,7 +363,7 @@
             this.dgvUsuariosPrestamo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvUsuariosPrestamo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvUsuariosPrestamo.ThemeStyle.HeaderStyle.Height = 24;
-            this.dgvUsuariosPrestamo.ThemeStyle.ReadOnly = false;
+            this.dgvUsuariosPrestamo.ThemeStyle.ReadOnly = true;
             this.dgvUsuariosPrestamo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsuariosPrestamo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUsuariosPrestamo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -376,10 +374,10 @@
             // 
             // Reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(1061, 779);
+            this.ClientSize = new System.Drawing.Size(796, 633);
             this.Controls.Add(this.pnlUsuariosPrestamo);
             this.Controls.Add(this.pnlLibrosDisponibles);
             this.Controls.Add(this.pnlPrestamosActivos);
@@ -389,7 +387,7 @@
             this.Controls.Add(this.rbtnLibrosDispoibles);
             this.Controls.Add(this.rbtnPrestamosActivos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reportes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).EndInit();

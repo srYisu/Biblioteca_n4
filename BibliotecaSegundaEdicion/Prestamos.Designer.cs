@@ -56,10 +56,10 @@
             this.cbmUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbmUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbmUsuario.ItemHeight = 30;
-            this.cbmUsuario.Location = new System.Drawing.Point(91, 201);
-            this.cbmUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbmUsuario.Location = new System.Drawing.Point(68, 163);
+            this.cbmUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbmUsuario.Name = "cbmUsuario";
-            this.cbmUsuario.Size = new System.Drawing.Size(229, 36);
+            this.cbmUsuario.Size = new System.Drawing.Size(173, 36);
             this.cbmUsuario.TabIndex = 1;
             // 
             // cbmLibro
@@ -75,10 +75,10 @@
             this.cbmLibro.Items.AddRange(new object[] {
             "Disponible",
             "Disponiblen\'t"});
-            this.cbmLibro.Location = new System.Drawing.Point(441, 201);
-            this.cbmLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbmLibro.Location = new System.Drawing.Point(331, 163);
+            this.cbmLibro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbmLibro.Name = "cbmLibro";
-            this.cbmLibro.Size = new System.Drawing.Size(229, 36);
+            this.cbmLibro.Size = new System.Drawing.Size(173, 36);
             this.cbmLibro.TabIndex = 2;
             // 
             // dgvPrestamos
@@ -109,9 +109,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrestamos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrestamos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPrestamos.Location = new System.Drawing.Point(37, 268);
-            this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPrestamos.Location = new System.Drawing.Point(28, 218);
+            this.dgvPrestamos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPrestamos.Name = "dgvPrestamos";
+            this.dgvPrestamos.ReadOnly = true;
             this.dgvPrestamos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -124,7 +125,7 @@
             this.dgvPrestamos.RowHeadersVisible = false;
             this.dgvPrestamos.RowHeadersWidth = 51;
             this.dgvPrestamos.RowTemplate.Height = 24;
-            this.dgvPrestamos.Size = new System.Drawing.Size(983, 353);
+            this.dgvPrestamos.Size = new System.Drawing.Size(737, 287);
             this.dgvPrestamos.TabIndex = 5;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -139,7 +140,7 @@
             this.dgvPrestamos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPrestamos.ThemeStyle.HeaderStyle.Height = 24;
-            this.dgvPrestamos.ThemeStyle.ReadOnly = false;
+            this.dgvPrestamos.ThemeStyle.ReadOnly = true;
             this.dgvPrestamos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPrestamos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPrestamos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,10 +160,9 @@
             this.btnGuardarPrestamo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnGuardarPrestamo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPrestamo.Location = new System.Drawing.Point(789, 201);
-            this.btnGuardarPrestamo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarPrestamo.Location = new System.Drawing.Point(592, 163);
             this.btnGuardarPrestamo.Name = "btnGuardarPrestamo";
-            this.btnGuardarPrestamo.Size = new System.Drawing.Size(231, 44);
+            this.btnGuardarPrestamo.Size = new System.Drawing.Size(173, 36);
             this.btnGuardarPrestamo.TabIndex = 6;
             this.btnGuardarPrestamo.Text = "Guardar";
             this.btnGuardarPrestamo.Click += new System.EventHandler(this.btnGuardarPrestamo_Click);
@@ -171,10 +171,9 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblUsuario.Location = new System.Drawing.Point(87, 159);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(65, 129);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(81, 28);
+            this.lblUsuario.Size = new System.Drawing.Size(65, 21);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -182,10 +181,9 @@
             // 
             this.lblLibro.AutoSize = true;
             this.lblLibro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLibro.Location = new System.Drawing.Point(436, 159);
-            this.lblLibro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLibro.Location = new System.Drawing.Point(327, 129);
             this.lblLibro.Name = "lblLibro";
-            this.lblLibro.Size = new System.Drawing.Size(58, 28);
+            this.lblLibro.Size = new System.Drawing.Size(48, 21);
             this.lblLibro.TabIndex = 8;
             this.lblLibro.Text = "Libro";
             // 
@@ -194,10 +192,9 @@
             this.lblNombrePagina.AutoSize = true;
             this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePagina.Location = new System.Drawing.Point(432, 11);
-            this.lblNombrePagina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombrePagina.Location = new System.Drawing.Point(324, 9);
             this.lblNombrePagina.Name = "lblNombrePagina";
-            this.lblNombrePagina.Size = new System.Drawing.Size(186, 46);
+            this.lblNombrePagina.Size = new System.Drawing.Size(152, 37);
             this.lblNombrePagina.TabIndex = 11;
             this.lblNombrePagina.Text = "Prestamos";
             // 
@@ -206,10 +203,9 @@
             this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.image__6_;
             this.picLogoPagina.ImageRotate = 0F;
-            this.picLogoPagina.Location = new System.Drawing.Point(907, 15);
-            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogoPagina.Location = new System.Drawing.Point(680, 12);
             this.picLogoPagina.Name = "picLogoPagina";
-            this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
+            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoPagina.TabIndex = 13;
             this.picLogoPagina.TabStop = false;
@@ -219,10 +215,9 @@
             // 
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTipoUsuario.Location = new System.Drawing.Point(88, 53);
-            this.lblTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(66, 43);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(154, 28);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(123, 21);
             this.lblTipoUsuario.TabIndex = 15;
             this.lblTipoUsuario.Text = "Tipo de usuario";
             // 
@@ -239,19 +234,19 @@
             this.cmbTipoDeUsuario.Items.AddRange(new object[] {
             "Estudiante",
             "Profesor"});
-            this.cmbTipoDeUsuario.Location = new System.Drawing.Point(92, 95);
-            this.cmbTipoDeUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTipoDeUsuario.Location = new System.Drawing.Point(69, 77);
+            this.cmbTipoDeUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoDeUsuario.Name = "cmbTipoDeUsuario";
-            this.cmbTipoDeUsuario.Size = new System.Drawing.Size(229, 36);
+            this.cmbTipoDeUsuario.Size = new System.Drawing.Size(173, 36);
             this.cmbTipoDeUsuario.TabIndex = 14;
             this.cmbTipoDeUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDeUsuario_SelectedIndexChanged);
             // 
             // Prestamos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(1061, 657);
+            this.ClientSize = new System.Drawing.Size(796, 534);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.cmbTipoDeUsuario);
             this.Controls.Add(this.picLogoPagina);
@@ -263,7 +258,7 @@
             this.Controls.Add(this.cbmLibro);
             this.Controls.Add(this.cbmUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Prestamos";
             this.Text = "++";
             this.Load += new System.EventHandler(this.Prestamos_Load);

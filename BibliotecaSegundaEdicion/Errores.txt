@@ -7,3 +7,5 @@
 11/12/2024 04:00:13 a. m.: Error inesperado en la consulta de usuarios: Connection must be valid and open.
 11/12/2024 04:03:55 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.
 11/12/2024 04:04:02 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.
+11/12/2024 04:04:48 a. m.: Error de base de datos en la consulta de usuarios: Connection must be valid and open.
+11/12/2024 04:04:51 a. m.: Error de base de datos en la consulta de usuarios: Connection must be valid and open.

@@ -60,13 +60,13 @@
             this.txtIdentificación.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdentificación.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdentificación.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentificación.Location = new System.Drawing.Point(51, 220);
-            this.txtIdentificación.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIdentificación.Location = new System.Drawing.Point(38, 179);
+            this.txtIdentificación.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtIdentificación.Name = "txtIdentificación";
             this.txtIdentificación.PasswordChar = '\0';
             this.txtIdentificación.PlaceholderText = "";
             this.txtIdentificación.SelectedText = "";
-            this.txtIdentificación.Size = new System.Drawing.Size(231, 44);
+            this.txtIdentificación.Size = new System.Drawing.Size(173, 36);
             this.txtIdentificación.TabIndex = 6;
             // 
             // txtNombre
@@ -80,13 +80,13 @@
             this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Location = new System.Drawing.Point(52, 119);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.Location = new System.Drawing.Point(39, 97);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderText = "";
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(231, 48);
+            this.txtNombre.Size = new System.Drawing.Size(173, 39);
             this.txtNombre.TabIndex = 5;
             // 
             // cmbTipoUsuario
@@ -102,10 +102,10 @@
             this.cmbTipoUsuario.Items.AddRange(new object[] {
             "Estudiante",
             "Profesor"});
-            this.cmbTipoUsuario.Location = new System.Drawing.Point(389, 119);
-            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTipoUsuario.Location = new System.Drawing.Point(292, 97);
+            this.cmbTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(229, 36);
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(173, 36);
             this.cmbTipoUsuario.TabIndex = 4;
             // 
             // dgvUsuarios
@@ -136,9 +136,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUsuarios.Location = new System.Drawing.Point(51, 330);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUsuarios.Location = new System.Drawing.Point(38, 268);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -151,7 +152,7 @@
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(961, 298);
+            this.dgvUsuarios.Size = new System.Drawing.Size(721, 242);
             this.dgvUsuarios.TabIndex = 8;
             this.dgvUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsuarios.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -166,7 +167,7 @@
             this.dgvUsuarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvUsuarios.ThemeStyle.HeaderStyle.Height = 24;
-            this.dgvUsuarios.ThemeStyle.ReadOnly = false;
+            this.dgvUsuarios.ThemeStyle.ReadOnly = true;
             this.dgvUsuarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUsuarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUsuarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,10 +187,9 @@
             this.btnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(781, 119);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(586, 97);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(231, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(173, 36);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -198,10 +198,9 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(45, 86);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(34, 70);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(87, 28);
+            this.lblUsuario.Size = new System.Drawing.Size(71, 21);
             this.lblUsuario.TabIndex = 10;
             this.lblUsuario.Text = "Nombre";
             // 
@@ -209,10 +208,9 @@
             // 
             this.lblIdentificacion.AutoSize = true;
             this.lblIdentificacion.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblIdentificacion.Location = new System.Drawing.Point(47, 185);
-            this.lblIdentificacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdentificacion.Location = new System.Drawing.Point(35, 150);
             this.lblIdentificacion.Name = "lblIdentificacion";
-            this.lblIdentificacion.Size = new System.Drawing.Size(190, 28);
+            this.lblIdentificacion.Size = new System.Drawing.Size(154, 21);
             this.lblIdentificacion.TabIndex = 11;
             this.lblIdentificacion.Text = "N. Idententificacion";
             // 
@@ -220,10 +218,9 @@
             // 
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTipoUsuario.Location = new System.Drawing.Point(384, 86);
-            this.lblTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(288, 70);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(156, 28);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(125, 21);
             this.lblTipoUsuario.TabIndex = 12;
             this.lblTipoUsuario.Text = "Tipo de Usuario";
             // 
@@ -232,10 +229,9 @@
             this.lblNombrePagina.AutoSize = true;
             this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePagina.Location = new System.Drawing.Point(423, 11);
-            this.lblNombrePagina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombrePagina.Location = new System.Drawing.Point(317, 9);
             this.lblNombrePagina.Name = "lblNombrePagina";
-            this.lblNombrePagina.Size = new System.Drawing.Size(159, 46);
+            this.lblNombrePagina.Size = new System.Drawing.Size(128, 37);
             this.lblNombrePagina.TabIndex = 13;
             this.lblNombrePagina.Text = "Usuarios";
             // 
@@ -244,10 +240,9 @@
             this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.lapiz_de_usuario;
             this.picLogoPagina.ImageRotate = 0F;
-            this.picLogoPagina.Location = new System.Drawing.Point(907, 11);
-            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogoPagina.Location = new System.Drawing.Point(680, 9);
             this.picLogoPagina.Name = "picLogoPagina";
-            this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
+            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoPagina.TabIndex = 14;
             this.picLogoPagina.TabStop = false;
@@ -263,10 +258,9 @@
             this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(781, 220);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(586, 179);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(231, 44);
+            this.btnActualizar.Size = new System.Drawing.Size(173, 36);
             this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -283,13 +277,13 @@
             this.txtBuscador.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscador.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtBuscador.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscador.Location = new System.Drawing.Point(357, 281);
-            this.txtBuscador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscador.Location = new System.Drawing.Point(268, 228);
+            this.txtBuscador.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.PasswordChar = '\0';
             this.txtBuscador.PlaceholderText = "";
             this.txtBuscador.SelectedText = "";
-            this.txtBuscador.Size = new System.Drawing.Size(339, 44);
+            this.txtBuscador.Size = new System.Drawing.Size(254, 36);
             this.txtBuscador.TabIndex = 16;
             this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             this.txtBuscador.Enter += new System.EventHandler(this.txtBuscador_Enter);
@@ -297,10 +291,10 @@
             // 
             // Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(1061, 657);
+            this.ClientSize = new System.Drawing.Size(796, 534);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.picLogoPagina);
@@ -314,7 +308,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.cmbTipoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
