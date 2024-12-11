@@ -67,8 +67,8 @@ namespace BibliotecaSegundaEdicion
         }
         private void CargarDatosUsuarios()
         {
-            gestionUsuarios.nombre = txtNombre.Text;
             gestionUsuarios.id = getidExist();
+            gestionUsuarios.nombre = txtNombre.Text;
             gestionUsuarios.tipoUsuario = cmbTipoUsuario.SelectedItem.ToString();
         }
         private int getidExist()
@@ -99,7 +99,10 @@ namespace BibliotecaSegundaEdicion
             {
                 if (e.ColumnIndex == dgvUsuarios.Columns["btnEditar"].Index)
                 {
-
+                    DataGridViewRow fila = dgvUsuarios.Rows[e.RowIndex];
+                    txtIdentificación.Text = Convert.ToString(fila.Cells["id"].Value);
+                    txtNombre.Text = Convert.ToString(fila.Cells["nombre"].Value);
+                    cmbTipoUsuario.SelectedItem = Convert.ToString(fila.Cells["tipo"].Value);
                 }
                 if (e.ColumnIndex == dgvUsuarios.Columns["btnEliminar"].Index)
                 {
@@ -110,5 +113,20 @@ namespace BibliotecaSegundaEdicion
                 }
             }
         }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarDatosUsuarios();
+            if (consulta.EditarUsuarios(gestionUsuarios))
+            {
+                CargarUsuarios();
+            }
+        }
     }
 }
+

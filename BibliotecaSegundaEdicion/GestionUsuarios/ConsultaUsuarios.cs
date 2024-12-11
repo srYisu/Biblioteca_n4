@@ -37,8 +37,8 @@ namespace BibliotecaSegundaEdicion
                 while (mReader.Read())
                 {
                     usuario = new GestionUsuarios();
-                    usuario.nombre = mReader.GetString("nombre");
                     usuario.id = mReader.GetInt32("id");
+                    usuario.nombre = mReader.GetString("nombre");
                     usuario.tipoUsuario = mReader.GetString("tipo");
                     usuarios.Add(usuario);
                 }
@@ -52,16 +52,29 @@ namespace BibliotecaSegundaEdicion
 
         internal bool AddUsuario(GestionUsuarios usuarios)
         {
-            string INSERT = "INSERT INTO usuarios(id, nombre, tipo ) values (@id, @nombre, @tipo)";
+            string INSERT = "INSERT INTO usuarios(nombre, tipo ) values (@nombre, @tipo)";
 
             MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMySQL.GetConnection());
 
-            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@id", usuarios.id));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@nombre", usuarios.nombre));
             mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@tipo", usuarios.tipoUsuario));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@id", usuarios.id));
             return mCommand.ExecuteNonQuery() > 0;
 
         }
+        internal bool EditarUsuarios(GestionUsuarios usuarios)
+        {
+            string UPDATE = "UPDATE usuarios SET nombre = @nombre, tipo = @tipo WHERE id = @id;";
+
+            MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMySQL.GetConnection());
+
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@nombre", usuarios.nombre));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@tipo", usuarios.tipoUsuario));
+            mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@id", usuarios.id));
+            return mCommand.ExecuteNonQuery() > 0;
+
+        }
+
         public bool DeleteUsuario(int iD)
         {
             string DELETE = "DELETE FROM usuarios WHERE id = @id;";

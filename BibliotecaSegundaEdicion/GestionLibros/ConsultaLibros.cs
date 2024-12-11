@@ -82,13 +82,13 @@ namespace BibliotecaSegundaEdicion
             return mCommand.ExecuteNonQuery() > 0;
         }
 
-        public bool eliminarLibro(int ISbn)
+        public bool eliminarLibro(int Isbn)
         {
             string DELETE = "DELETE FROM libros WHERE ISBN = @ISBN;";
 
             using (MySqlCommand mCommand = new MySqlCommand(DELETE, conexionMySQL.GetConnection()))
             {
-                mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", ISbn));
+                mCommand.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@ISBN", Isbn));
                 return mCommand.ExecuteNonQuery() > 0;
             }
         }

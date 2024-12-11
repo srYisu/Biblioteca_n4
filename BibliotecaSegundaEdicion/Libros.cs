@@ -123,7 +123,6 @@ namespace BibliotecaSegundaEdicion
         {
 
         }
-
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -138,14 +137,20 @@ namespace BibliotecaSegundaEdicion
                 }
                 if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index)
                 {
-                    int isbn = Convert.ToInt32(dgvLibros.Rows[e.RowIndex].Cells["ISBN"].Value.ToString());
+                    int ISBN = Convert.ToInt32(dgvLibros.Rows[e.RowIndex].Cells["ISBN"].Value);
 
-                    consulta.eliminarLibro(isbn);
+                    consulta.eliminarLibro(ISBN);
                     CargarProductos();
                 }
             }
         }
-        
+        private void limpiarcampos()
+        {
+            txtISBN.Text = "";
+            txtTitulo.Text = "";
+            txtAutor.Text = "";
+            cmbEstado.SelectedItem = "";
+        }
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
             if (!DatosCorrectos())

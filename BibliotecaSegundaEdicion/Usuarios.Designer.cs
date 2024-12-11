@@ -42,6 +42,7 @@
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.lblNombrePagina = new System.Windows.Forms.Label();
             this.picLogoPagina = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnActualizar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).BeginInit();
             this.SuspendLayout();
@@ -182,7 +183,7 @@
             this.btnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(586, 193);
+            this.btnGuardar.Location = new System.Drawing.Point(586, 97);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(173, 36);
             this.btnGuardar.TabIndex = 9;
@@ -243,12 +244,29 @@
             this.picLogoPagina.TabStop = false;
             this.picLogoPagina.UseTransparentBackground = true;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnActualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnActualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnActualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(586, 179);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(173, 36);
+            this.btnActualizar.TabIndex = 15;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.ClientSize = new System.Drawing.Size(796, 534);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.picLogoPagina);
             this.Controls.Add(this.lblNombrePagina);
             this.Controls.Add(this.lblTipoUsuario);
@@ -263,6 +281,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoPagina)).EndInit();
             this.ResumeLayout(false);
@@ -281,5 +300,6 @@
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.Label lblNombrePagina;
         private Guna.UI2.WinForms.Guna2PictureBox picLogoPagina;
+        private Guna.UI2.WinForms.Guna2Button btnActualizar;
     }
 }
