@@ -79,7 +79,7 @@ namespace BibliotecaSegundaEdicion
                     cbmLibro.Items.Add(libro.titulo);
                     librosDisponibles.Add(libro);
                 }
-                
+
             }
         }
 
@@ -93,7 +93,7 @@ namespace BibliotecaSegundaEdicion
             dgvPrestamos.Columns.Add("autor", "Autor");
             dgvPrestamos.Columns.Add("ISBN", "ISBN");
             dgvPrestamos.Columns.Add("estado", "Estado");
-            
+
             dgvPrestamos.Columns["usuario"].ReadOnly = true;
             dgvPrestamos.Columns["ID"].ReadOnly = true;
             dgvPrestamos.Columns["titulo"].ReadOnly = true;
@@ -132,7 +132,7 @@ namespace BibliotecaSegundaEdicion
         {
             foreach (var usu in usuariosP)
             {
-                foreach(var dis in librosDisponibles)
+                foreach (var dis in librosDisponibles)
                 {
                     if (usu.nombre.ToString() == cbmUsuario.SelectedItem.ToString() && dis.titulo.ToString() == cbmLibro.SelectedItem.ToString())
                     {
@@ -161,7 +161,7 @@ namespace BibliotecaSegundaEdicion
 
         private void dgvPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >=0)
+            if (e.RowIndex >= 0)
             {
                 if (e.ColumnIndex == dgvPrestamos.Columns["btnFinalizar"].Index)
                 {
