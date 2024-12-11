@@ -50,7 +50,7 @@ namespace BibliotecaSegundaEdicion
                 if (usuarios.tipoUsuario.ToString() == tipoUsuario)
                 {
                     cbmUsuario.Items.Add(usuarios.nombre);
-
+                    //usuariosPrestamo.Add();
                 }
             }
         }

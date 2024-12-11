@@ -12,6 +12,7 @@ namespace BibliotecaSegundaEdicion
 {
     public partial class Usuarios : Form
     {
+        string buscador = "Buscador";
         private List<GestionUsuarios> usuarios;
         private ConsultaUsuarios consulta;
         private GestionUsuarios gestionUsuarios;
@@ -20,9 +21,11 @@ namespace BibliotecaSegundaEdicion
             usuarios = new List<GestionUsuarios>();
             consulta = new ConsultaUsuarios();
             gestionUsuarios = new GestionUsuarios();
+
             InitializeComponent();
             CargarTabla();
             CargarUsuarios();
+            txtBuscador.Text = buscador;
         }
 
         private void CargarTabla()
@@ -125,6 +128,22 @@ namespace BibliotecaSegundaEdicion
             if (consulta.EditarUsuarios(gestionUsuarios))
             {
                 CargarUsuarios();
+            }
+        }
+
+        private void txtBuscador_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscador.Text == buscador)
+            {
+                txtBuscador.Text = "";
+            }
+        }
+
+        private void txtBuscador_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscador.Text))
+            {
+                txtBuscador.Text = buscador;
             }
         }
     }
