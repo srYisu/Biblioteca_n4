@@ -191,6 +191,7 @@ namespace BibliotecaSegundaEdicion
             if (string.IsNullOrWhiteSpace(txtBuscador.Text))
             {
                 txtBuscador.Text = buscador;
+                CargarProductos();
             }
         }
 
@@ -200,4 +201,3 @@ namespace BibliotecaSegundaEdicion
         }
     }
 }
-

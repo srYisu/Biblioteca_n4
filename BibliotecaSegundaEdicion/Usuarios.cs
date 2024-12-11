@@ -144,9 +144,10 @@ namespace BibliotecaSegundaEdicion
             if (string.IsNullOrWhiteSpace(txtBuscador.Text))
             {
                 txtBuscador.Text = buscador;
+                CargarUsuarios();
             }
         }
-
+        
         private void txtBuscador_TextChanged(object sender, EventArgs e)
         {
             CargarUsuarios(txtBuscador.Text.Trim());
