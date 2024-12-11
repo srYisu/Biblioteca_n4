@@ -57,8 +57,8 @@ namespace BibliotecaSegundaEdicion
             }
             catch (Exception ex) // Otros errores inesperados
             {
-                errores.RegistrarError("Error inesperado en la consulta de usuarios: " + ex.Message);
-                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errores.RegistrarError("Error de base de datos en la consulta de usuarios: " + ex.Message);
+                MessageBox.Show("Error de base de datos en la consulta de usuarios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

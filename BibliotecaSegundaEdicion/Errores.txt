@@ -1,3 +1,9 @@
 ﻿11/12/2024 03:25:13 a. m.: No se puede calcular la raíz cuadrada de un número negativo.
 11/12/2024 03:25:16 a. m.: Por favor, ingrese un número válido.
 11/12/2024 03:25:22 a. m.: Por favor, ingrese un número válido.
+11/12/2024 03:59:54 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.
+11/12/2024 04:00:01 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.
+11/12/2024 04:00:09 a. m.: Error inesperado en la consulta de usuarios: Connection must be valid and open.
+11/12/2024 04:00:13 a. m.: Error inesperado en la consulta de usuarios: Connection must be valid and open.
+11/12/2024 04:03:55 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.
+11/12/2024 04:04:02 a. m.: Error inesperado en la consulta de libros: Connection must be valid and open.

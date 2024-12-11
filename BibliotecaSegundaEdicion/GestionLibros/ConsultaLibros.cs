@@ -62,7 +62,7 @@ namespace BibliotecaSegundaEdicion
             catch (Exception ex) // Capturar cualquier otro error inesperado
             {
                 errores.RegistrarError("Error inesperado en la consulta de libros: " + ex.Message);
-                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al consultar los libros en la base de datos " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
