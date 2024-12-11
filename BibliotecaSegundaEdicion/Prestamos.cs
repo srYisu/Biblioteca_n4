@@ -22,6 +22,7 @@ namespace BibliotecaSegundaEdicion
         private ConsultaPrestamos consultaPrestamos;
         private GestionPrestamos gestionPrestamos;
         private List<GestionUsuarios> usuariosP;
+        
         public Prestamos()
         {
             libros = new List<GestionLibros>();
@@ -79,7 +80,6 @@ namespace BibliotecaSegundaEdicion
                     cbmLibro.Items.Add(libro.titulo);
                     librosDisponibles.Add(libro);
                 }
-
             }
         }
 
@@ -165,11 +165,14 @@ namespace BibliotecaSegundaEdicion
             {
                 if (e.ColumnIndex == dgvPrestamos.Columns["btnFinalizar"].Index)
                 {
+                    CargarDatos();
+                    
+                    string titulo = Convert.ToString(dgvPrestamos.Rows[e.RowIndex].Cells["titulo"].Value);
+                    string autor = Convert.ToString(dgvPrestamos.Rows[e.RowIndex].Cells["autor"].Value);
                     int ISbn = Convert.ToInt32(dgvPrestamos.Rows[e.RowIndex].Cells["ISBN"].Value);
+                    consulta.EditLibroDisponible(titulo, autor, ISbn);
                     consultaPrestamos.finalizarPrestamo(ISbn);
                     CargarPrestamos();
-                    CargarDatos();
-                    consulta.EditLibroDisponible(gestionPrestamos);
                     LLenarComboBoxLibros();
                 }
             }
