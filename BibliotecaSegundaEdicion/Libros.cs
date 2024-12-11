@@ -85,7 +85,6 @@ namespace BibliotecaSegundaEdicion
             if (!DatosCorrectos())
             {
                 return;
-                limpiarcampos();
             }
 
             cargarDatosLibros();
@@ -117,9 +116,10 @@ namespace BibliotecaSegundaEdicion
         }
         private bool DatosCorrectos()
         {
-            if (txtTitulo.Text.Trim().Equals("") || txtAutor.Text.Trim().Equals(""))
+            if (txtTitulo.Text.Trim().Equals("") || txtAutor.Text.Trim().Equals("") || cmbEstado.SelectedItem == null)
             {
                 MessageBox.Show("Ingrese Todos los datos");
+                limpiarcampos();
                 return false;
             }
             return true;
@@ -143,10 +143,14 @@ namespace BibliotecaSegundaEdicion
                 }
                 if (e.ColumnIndex == dgvLibros.Columns["btnEliminar"].Index)
                 {
-                    int ISBN = Convert.ToInt32(dgvLibros.Rows[e.RowIndex].Cells["ISBN"].Value);
+                    if ("Disponible" == Convert.ToString(dgvLibros.Rows[e.RowIndex].Cells["estado"].Value))
+                    {
+                        int ISBN = Convert.ToInt32(dgvLibros.Rows[e.RowIndex].Cells["ISBN"].Value);
 
-                    consulta.eliminarLibro(ISBN);
-                    CargarProductos();
+                        consulta.eliminarLibro(ISBN);
+                        CargarProductos();
+                    }
+                    else { MessageBox.Show("No puedes eliminar un libro prestado"); return; }
                 }
             }
         }
@@ -166,6 +170,7 @@ namespace BibliotecaSegundaEdicion
             cargarDatosLibros();
             if (consulta.EditLibro(gestionLibros))
             {
+                MessageBox.Show("Datos Actualizados");
                 CargarProductos();
                 limpiarcampos();
             }

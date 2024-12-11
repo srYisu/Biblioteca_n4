@@ -148,6 +148,10 @@ namespace BibliotecaSegundaEdicion
         }
         private void btnGuardarPrestamo_Click(object sender, EventArgs e)
         {
+            if (!DatosCorrectos())
+            {
+                return;
+            }
             CargarDatos();
             if (consultaPrestamos.AddPrestamo(gestionPrestamos))
             {
@@ -158,7 +162,16 @@ namespace BibliotecaSegundaEdicion
             }
             LLenarComboBoxLibros();
         }
-
+        private bool DatosCorrectos()
+        {
+            if (cbmUsuario.SelectedItem == null || cmbTipoDeUsuario.SelectedItem == null || cbmLibro.SelectedItem == null)
+            {
+                limpiarcampos();
+                MessageBox.Show("Ingrese Todos los datos");
+                return false;
+            }
+            return true;
+        }
         private void dgvPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

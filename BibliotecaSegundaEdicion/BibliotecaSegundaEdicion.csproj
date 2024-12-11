@@ -106,6 +106,7 @@
     <Compile Include="AbrirForms.cs" />
     <Compile Include="BaseDeDatos\Conexion.cs" />
     <Compile Include="BaseDeDatos\ConexionMySQL.cs" />
+    <Compile Include="Errores.cs" />
     <Compile Include="Prestamos\ConsultaPrestamos.cs" />
     <Compile Include="Prestamos\GestionPrestamos.cs" />
     <Compile Include="GestionUsuarios\ConsultaUsuarios.cs" />

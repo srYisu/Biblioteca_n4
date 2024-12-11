@@ -88,6 +88,10 @@ namespace BibliotecaSegundaEdicion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!DatosCorrectos())
+            {
+                return;
+            }
             CargarDatosUsuarios();
             if (consulta.AddUsuario(gestionUsuarios))
             {
@@ -96,7 +100,16 @@ namespace BibliotecaSegundaEdicion
                 limpiarcampos();
             }
         }
-
+        private bool DatosCorrectos()
+        {
+            if (txtNombre.Text.Trim().Equals("") || cmbTipoUsuario.SelectedItem == null)
+            {
+                limpiarcampos();
+                MessageBox.Show("Ingrese Todos los datos");
+                return false;
+            }
+            return true;
+        }
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -125,9 +138,15 @@ namespace BibliotecaSegundaEdicion
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!DatosCorrectos())
+            {
+                return;
+            }
+
             CargarDatosUsuarios();
             if (consulta.EditarUsuarios(gestionUsuarios))
             {
+                MessageBox.Show("Datos Actualizados");
                 CargarUsuarios();
                 limpiarcampos();
             }
