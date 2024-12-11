@@ -85,6 +85,7 @@ namespace BibliotecaSegundaEdicion
             if (!DatosCorrectos())
             {
                 return;
+                limpiarcampos();
             }
 
             cargarDatosLibros();
@@ -92,6 +93,7 @@ namespace BibliotecaSegundaEdicion
             {
                 MessageBox.Show("Productos agregados correctamente");
                 CargarProductos();
+                limpiarcampos();
             }
         }
         private void cargarDatosLibros()
@@ -150,10 +152,10 @@ namespace BibliotecaSegundaEdicion
         }
         private void limpiarcampos()
         {
-            txtISBN.Text = "";
-            txtTitulo.Text = "";
-            txtAutor.Text = "";
-            cmbEstado.SelectedItem = "";
+            txtISBN.Clear();
+            txtTitulo.Clear();
+            txtAutor.Clear();
+            cmbEstado.SelectedIndex = -1;
         }
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
@@ -165,6 +167,7 @@ namespace BibliotecaSegundaEdicion
             if (consulta.EditLibro(gestionLibros))
             {
                 CargarProductos();
+                limpiarcampos();
             }
         }
 

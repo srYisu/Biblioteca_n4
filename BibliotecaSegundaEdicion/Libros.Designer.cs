@@ -63,10 +63,10 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Disponible",
             "Prestamo"});
-            this.cmbEstado.Location = new System.Drawing.Point(284, 167);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEstado.Location = new System.Drawing.Point(379, 206);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(173, 36);
+            this.cmbEstado.Size = new System.Drawing.Size(229, 36);
             this.cmbEstado.TabIndex = 0;
             // 
             // txtTitulo
@@ -81,13 +81,13 @@
             this.txtTitulo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTitulo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitulo.Location = new System.Drawing.Point(38, 85);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTitulo.Location = new System.Drawing.Point(51, 105);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.PasswordChar = '\0';
             this.txtTitulo.PlaceholderText = "";
             this.txtTitulo.SelectedText = "";
-            this.txtTitulo.Size = new System.Drawing.Size(173, 36);
+            this.txtTitulo.Size = new System.Drawing.Size(231, 44);
             this.txtTitulo.TabIndex = 1;
             // 
             // txtAutor
@@ -101,13 +101,13 @@
             this.txtAutor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAutor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAutor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAutor.Location = new System.Drawing.Point(284, 85);
-            this.txtAutor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAutor.Location = new System.Drawing.Point(379, 105);
+            this.txtAutor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.PasswordChar = '\0';
             this.txtAutor.PlaceholderText = "";
             this.txtAutor.SelectedText = "";
-            this.txtAutor.Size = new System.Drawing.Size(173, 36);
+            this.txtAutor.Size = new System.Drawing.Size(231, 44);
             this.txtAutor.TabIndex = 2;
             // 
             // txtISBN
@@ -118,17 +118,18 @@
             this.txtISBN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtISBN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtISBN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtISBN.Enabled = false;
             this.txtISBN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtISBN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtISBN.Location = new System.Drawing.Point(37, 167);
-            this.txtISBN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtISBN.Location = new System.Drawing.Point(49, 206);
+            this.txtISBN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.PasswordChar = '\0';
             this.txtISBN.PlaceholderText = "";
             this.txtISBN.ReadOnly = true;
             this.txtISBN.SelectedText = "";
-            this.txtISBN.Size = new System.Drawing.Size(173, 36);
+            this.txtISBN.Size = new System.Drawing.Size(231, 44);
             this.txtISBN.TabIndex = 3;
             // 
             // dgvLibros
@@ -159,8 +160,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLibros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLibros.Location = new System.Drawing.Point(9, 279);
-            this.dgvLibros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLibros.Location = new System.Drawing.Point(12, 343);
+            this.dgvLibros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -174,7 +175,7 @@
             this.dgvLibros.RowHeadersVisible = false;
             this.dgvLibros.RowHeadersWidth = 51;
             this.dgvLibros.RowTemplate.Height = 24;
-            this.dgvLibros.Size = new System.Drawing.Size(776, 246);
+            this.dgvLibros.Size = new System.Drawing.Size(1035, 303);
             this.dgvLibros.TabIndex = 4;
             this.dgvLibros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLibros.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,10 +211,10 @@
             this.btnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(587, 85);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(783, 105);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(173, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(231, 44);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -223,9 +224,10 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTitulo.Location = new System.Drawing.Point(34, 60);
+            this.lblTitulo.Location = new System.Drawing.Point(45, 74);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(52, 21);
+            this.lblTitulo.Size = new System.Drawing.Size(64, 28);
             this.lblTitulo.TabIndex = 6;
             this.lblTitulo.Text = "Titulo";
             // 
@@ -233,9 +235,10 @@
             // 
             this.lblISBN.AutoSize = true;
             this.lblISBN.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblISBN.Location = new System.Drawing.Point(34, 139);
+            this.lblISBN.Location = new System.Drawing.Point(45, 171);
+            this.lblISBN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(46, 21);
+            this.lblISBN.Size = new System.Drawing.Size(56, 28);
             this.lblISBN.TabIndex = 7;
             this.lblISBN.Text = "ISBN";
             this.lblISBN.Click += new System.EventHandler(this.lblISBN_Click);
@@ -245,9 +248,10 @@
             this.lblAutor.AutoSize = true;
             this.lblAutor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lblAutor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAutor.Location = new System.Drawing.Point(281, 60);
+            this.lblAutor.Location = new System.Drawing.Point(375, 74);
+            this.lblAutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(52, 21);
+            this.lblAutor.Size = new System.Drawing.Size(63, 28);
             this.lblAutor.TabIndex = 8;
             this.lblAutor.Text = "Autor";
             // 
@@ -255,9 +259,10 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEstado.Location = new System.Drawing.Point(281, 139);
+            this.lblEstado.Location = new System.Drawing.Point(375, 171);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(59, 21);
+            this.lblEstado.Size = new System.Drawing.Size(72, 28);
             this.lblEstado.TabIndex = 9;
             this.lblEstado.Text = "Estado";
             // 
@@ -266,9 +271,10 @@
             this.lblNombrePagina.AutoSize = true;
             this.lblNombrePagina.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePagina.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePagina.Location = new System.Drawing.Point(329, 9);
+            this.lblNombrePagina.Location = new System.Drawing.Point(439, 11);
+            this.lblNombrePagina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombrePagina.Name = "lblNombrePagina";
-            this.lblNombrePagina.Size = new System.Drawing.Size(96, 37);
+            this.lblNombrePagina.Size = new System.Drawing.Size(118, 46);
             this.lblNombrePagina.TabIndex = 10;
             this.lblNombrePagina.Text = "Libros";
             // 
@@ -277,9 +283,10 @@
             this.picLogoPagina.BackColor = System.Drawing.Color.Transparent;
             this.picLogoPagina.Image = global::BibliotecaSegundaEdicion.Properties.Resources.libro_marcador__2_;
             this.picLogoPagina.ImageRotate = 0F;
-            this.picLogoPagina.Location = new System.Drawing.Point(680, 12);
+            this.picLogoPagina.Location = new System.Drawing.Point(907, 15);
+            this.picLogoPagina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picLogoPagina.Name = "picLogoPagina";
-            this.picLogoPagina.Size = new System.Drawing.Size(104, 57);
+            this.picLogoPagina.Size = new System.Drawing.Size(139, 70);
             this.picLogoPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogoPagina.TabIndex = 11;
             this.picLogoPagina.TabStop = false;
@@ -295,10 +302,10 @@
             this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(133)))), ((int)(((byte)(48)))));
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(587, 167);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(783, 206);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(173, 36);
+            this.btnActualizar.Size = new System.Drawing.Size(231, 44);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
@@ -315,13 +322,13 @@
             this.txtBuscador.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscador.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtBuscador.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscador.Location = new System.Drawing.Point(268, 238);
-            this.txtBuscador.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBuscador.Location = new System.Drawing.Point(357, 293);
+            this.txtBuscador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.PasswordChar = '\0';
             this.txtBuscador.PlaceholderText = "";
             this.txtBuscador.SelectedText = "";
-            this.txtBuscador.Size = new System.Drawing.Size(254, 36);
+            this.txtBuscador.Size = new System.Drawing.Size(339, 44);
             this.txtBuscador.TabIndex = 13;
             this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             this.txtBuscador.Enter += new System.EventHandler(this.txtBuscador_Enter);
@@ -329,10 +336,10 @@
             // 
             // Libros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(796, 534);
+            this.ClientSize = new System.Drawing.Size(1061, 657);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.picLogoPagina);
@@ -348,7 +355,7 @@
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.cmbEstado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Libros";
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.Libros_Load);

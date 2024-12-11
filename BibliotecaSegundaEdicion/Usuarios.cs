@@ -93,6 +93,7 @@ namespace BibliotecaSegundaEdicion
             {
                 MessageBox.Show("Datos guardados");
                 CargarUsuarios();
+                limpiarcampos();
             }
         }
 
@@ -128,6 +129,7 @@ namespace BibliotecaSegundaEdicion
             if (consulta.EditarUsuarios(gestionUsuarios))
             {
                 CargarUsuarios();
+                limpiarcampos();
             }
         }
 
@@ -151,6 +153,12 @@ namespace BibliotecaSegundaEdicion
         private void txtBuscador_TextChanged(object sender, EventArgs e)
         {
             CargarUsuarios(txtBuscador.Text.Trim());
+        }
+        private void limpiarcampos()
+        {
+            txtNombre.Clear();
+            txtIdentificación.Clear();
+            cmbTipoUsuario.SelectedIndex = -1;
         }
     }
 }

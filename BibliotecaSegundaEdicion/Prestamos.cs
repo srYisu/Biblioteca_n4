@@ -165,8 +165,7 @@ namespace BibliotecaSegundaEdicion
             {
                 if (e.ColumnIndex == dgvPrestamos.Columns["btnFinalizar"].Index)
                 {
-                    CargarDatos();
-                    
+                    CargarDatos();                    
                     string titulo = Convert.ToString(dgvPrestamos.Rows[e.RowIndex].Cells["titulo"].Value);
                     string autor = Convert.ToString(dgvPrestamos.Rows[e.RowIndex].Cells["autor"].Value);
                     int ISbn = Convert.ToInt32(dgvPrestamos.Rows[e.RowIndex].Cells["ISBN"].Value);
@@ -174,8 +173,15 @@ namespace BibliotecaSegundaEdicion
                     consultaPrestamos.finalizarPrestamo(ISbn);
                     CargarPrestamos();
                     LLenarComboBoxLibros();
+                    MessageBox.Show("Prestamo finalizado");
                 }
             }
+        }
+        private void limpiarcampos()
+        {
+            cbmLibro.SelectedIndex = -1;
+            cbmUsuario.SelectedIndex = -1;
+            cmbTipoDeUsuario.SelectedIndex = -1;
         }
     }
 }

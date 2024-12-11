@@ -12,9 +12,21 @@ namespace BibliotecaSegundaEdicion
 {
     public partial class Reportes : Form
     {
+        //Esto es solo para la tabla de libros disponibles
         private List<GestionLibros> libros;
         private ConsultaLibros consulta;
         private GestionLibros gestionLibros;
+
+        //pa las otras 2 :D
+        private List<GestionPrestamos> prestamos;
+        private ConsultaPrestamos consultaPrestamos;
+        private GestionPrestamos gestionPrestamos;
+
+        //asereje
+        private List<GestionPrestamos> prestamos2;
+        private ConsultaPrestamos consultaPrestamos2;
+        private GestionPrestamos gestionPrestamos2;
+
         public Reportes()
         {
             InitializeComponent();
@@ -22,6 +34,14 @@ namespace BibliotecaSegundaEdicion
             libros = new List<GestionLibros>();
             consulta = new ConsultaLibros();
             gestionLibros = new GestionLibros();
+
+            prestamos = new List<GestionPrestamos>();
+            consultaPrestamos = new ConsultaPrestamos();
+            gestionPrestamos = new GestionPrestamos();
+
+            prestamos2 = new List<GestionPrestamos>();
+            consultaPrestamos2 = new ConsultaPrestamos();
+            gestionPrestamos2 = new GestionPrestamos();
 
             pnlPrestamosActivos.Visible = false;
             pnlUsuariosPrestamo.Visible = false;
@@ -31,7 +51,10 @@ namespace BibliotecaSegundaEdicion
             TablaPrestamosActivos();
             TablaUsuariosPrestamos();
 
+            ReportePrestamosActivos();
             ReporteLibrosDisponibles();
+            ReporteUsuariosPrestamos();
+
 
             rbtnLibrosDispoibles.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
             rbtnPrestamosActivos.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
@@ -61,7 +84,6 @@ namespace BibliotecaSegundaEdicion
 
             dgvUsuariosPrestamo.Columns.Add("ID", "Identificación");
             dgvUsuariosPrestamo.Columns.Add("nombre", "Nombre");
-            dgvUsuariosPrestamo.Columns.Add("tipoUsuario", "Tipo de usuario");
             dgvUsuariosPrestamo.Columns.Add("libro","Libro");
         }
         private void TablaLibrosDisponibles()
@@ -103,6 +125,30 @@ namespace BibliotecaSegundaEdicion
                     libro.autor,
                     libro.disponibilidad);
                 }
+            }
+        }
+        private void ReportePrestamosActivos(string filtro = "")
+        {
+            dgvPrestamos.Rows.Clear();
+            dgvPrestamos.Refresh();
+            prestamos.Clear();
+            prestamos = consultaPrestamos.GetPrestamos(filtro);
+
+            foreach (var pre in prestamos)
+            {
+                dgvPrestamos.Rows.Add(pre.titulo, pre.autor, pre.ISBN, pre.estado);
+            }
+        }
+        private void ReporteUsuariosPrestamos(string filtro = "")
+        {
+            dgvUsuariosPrestamo.Rows.Clear();
+            dgvUsuariosPrestamo.Refresh();
+            prestamos2.Clear();
+            prestamos2 = consultaPrestamos2.GetPrestamos(filtro);
+
+            foreach (var pre in prestamos2)
+            {
+                dgvUsuariosPrestamo.Rows.Add(pre.id, pre.usuario, pre.titulo);
             }
         }
     }
